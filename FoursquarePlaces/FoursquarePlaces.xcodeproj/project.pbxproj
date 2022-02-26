@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */; };
+		13561A9727CAAF7000F4E5F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9627CAAF7000F4E5F6 /* ContentView.swift */; };
+		13561A9927CAAF7100F4E5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13561A9827CAAF7100F4E5F6 /* Assets.xcassets */; };
+		13561A9C27CAAF7100F4E5F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13561A9B27CAAF7100F4E5F6 /* Preview Assets.xcassets */; };
+		13561AA627CAAF7100F4E5F6 /* FoursquarePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AA527CAAF7100F4E5F6 /* FoursquarePlacesTests.swift */; };
+		13561AB027CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */; };
+		13561AB227CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */; };
+		13561AC027CAB03600F4E5F6 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13561AA227CAAF7100F4E5F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13561A8927CAAF7000F4E5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13561A9027CAAF7000F4E5F6;
+			remoteInfo = FoursquarePlaces;
+		};
+		13561AAC27CAAF7100F4E5F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13561A8927CAAF7000F4E5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13561A9027CAAF7000F4E5F6;
+			remoteInfo = FoursquarePlaces;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquarePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesApp.swift; sourceTree = "<group>"; };
+		13561A9627CAAF7000F4E5F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		13561A9827CAAF7100F4E5F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13561A9B27CAAF7100F4E5F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13561AA127CAAF7100F4E5F6 /* FoursquarePlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13561AA527CAAF7100F4E5F6 /* FoursquarePlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesTests.swift; sourceTree = "<group>"; };
+		13561AAB27CAAF7100F4E5F6 /* FoursquarePlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITests.swift; sourceTree = "<group>"; };
+		13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13561A8E27CAAF7000F4E5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13561AC027CAB03600F4E5F6 /* SwiftUIFlux in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561A9E27CAAF7100F4E5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561AA827CAAF7100F4E5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13561A8827CAAF7000F4E5F6 = {
+			isa = PBXGroup;
+			children = (
+				13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */,
+				13561AA427CAAF7100F4E5F6 /* FoursquarePlacesTests */,
+				13561AAE27CAAF7100F4E5F6 /* FoursquarePlacesUITests */,
+				13561A9227CAAF7000F4E5F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13561A9227CAAF7000F4E5F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */,
+				13561AA127CAAF7100F4E5F6 /* FoursquarePlacesTests.xctest */,
+				13561AAB27CAAF7100F4E5F6 /* FoursquarePlacesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */,
+				13561A9627CAAF7000F4E5F6 /* ContentView.swift */,
+				13561A9827CAAF7100F4E5F6 /* Assets.xcassets */,
+				13561A9A27CAAF7100F4E5F6 /* Preview Content */,
+			);
+			path = FoursquarePlaces;
+			sourceTree = "<group>";
+		};
+		13561A9A27CAAF7100F4E5F6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				13561A9B27CAAF7100F4E5F6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13561AA427CAAF7100F4E5F6 /* FoursquarePlacesTests */ = {
+			isa = PBXGroup;
+			children = (
+				13561AA527CAAF7100F4E5F6 /* FoursquarePlacesTests.swift */,
+			);
+			path = FoursquarePlacesTests;
+			sourceTree = "<group>";
+		};
+		13561AAE27CAAF7100F4E5F6 /* FoursquarePlacesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */,
+				13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */,
+			);
+			path = FoursquarePlacesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13561A9027CAAF7000F4E5F6 /* FoursquarePlaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13561AB527CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlaces" */;
+			buildPhases = (
+				13561A8D27CAAF7000F4E5F6 /* Sources */,
+				13561A8E27CAAF7000F4E5F6 /* Frameworks */,
+				13561A8F27CAAF7000F4E5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoursquarePlaces;
+			packageProductDependencies = (
+				13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */,
+			);
+			productName = FoursquarePlaces;
+			productReference = 13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13561AA027CAAF7100F4E5F6 /* FoursquarePlacesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13561AB827CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesTests" */;
+			buildPhases = (
+				13561A9D27CAAF7100F4E5F6 /* Sources */,
+				13561A9E27CAAF7100F4E5F6 /* Frameworks */,
+				13561A9F27CAAF7100F4E5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13561AA327CAAF7100F4E5F6 /* PBXTargetDependency */,
+			);
+			name = FoursquarePlacesTests;
+			productName = FoursquarePlacesTests;
+			productReference = 13561AA127CAAF7100F4E5F6 /* FoursquarePlacesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13561AAA27CAAF7100F4E5F6 /* FoursquarePlacesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13561ABB27CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesUITests" */;
+			buildPhases = (
+				13561AA727CAAF7100F4E5F6 /* Sources */,
+				13561AA827CAAF7100F4E5F6 /* Frameworks */,
+				13561AA927CAAF7100F4E5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13561AAD27CAAF7100F4E5F6 /* PBXTargetDependency */,
+			);
+			name = FoursquarePlacesUITests;
+			productName = FoursquarePlacesUITests;
+			productReference = 13561AAB27CAAF7100F4E5F6 /* FoursquarePlacesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13561A8927CAAF7000F4E5F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					13561A9027CAAF7000F4E5F6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					13561AA027CAAF7100F4E5F6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 13561A9027CAAF7000F4E5F6;
+					};
+					13561AAA27CAAF7100F4E5F6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 13561A9027CAAF7000F4E5F6;
+					};
+				};
+			};
+			buildConfigurationList = 13561A8C27CAAF7000F4E5F6 /* Build configuration list for PBXProject "FoursquarePlaces" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13561A8827CAAF7000F4E5F6;
+			packageReferences = (
+				13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+			);
+			productRefGroup = 13561A9227CAAF7000F4E5F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13561A9027CAAF7000F4E5F6 /* FoursquarePlaces */,
+				13561AA027CAAF7100F4E5F6 /* FoursquarePlacesTests */,
+				13561AAA27CAAF7100F4E5F6 /* FoursquarePlacesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13561A8F27CAAF7000F4E5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13561A9C27CAAF7100F4E5F6 /* Preview Assets.xcassets in Resources */,
+				13561A9927CAAF7100F4E5F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561A9F27CAAF7100F4E5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561AA927CAAF7100F4E5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13561A8D27CAAF7000F4E5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13561A9727CAAF7000F4E5F6 /* ContentView.swift in Sources */,
+				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561A9D27CAAF7100F4E5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13561AA627CAAF7100F4E5F6 /* FoursquarePlacesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13561AA727CAAF7100F4E5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13561AB027CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift in Sources */,
+				13561AB227CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13561AA327CAAF7100F4E5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13561A9027CAAF7000F4E5F6 /* FoursquarePlaces */;
+			targetProxy = 13561AA227CAAF7100F4E5F6 /* PBXContainerItemProxy */;
+		};
+		13561AAD27CAAF7100F4E5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13561A9027CAAF7000F4E5F6 /* FoursquarePlaces */;
+			targetProxy = 13561AAC27CAAF7100F4E5F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13561AB327CAAF7100F4E5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13561AB427CAAF7100F4E5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13561AB627CAAF7100F4E5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FoursquarePlaces/Preview Content\"";
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13561AB727CAAF7100F4E5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FoursquarePlaces/Preview Content\"";
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlaces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		13561AB927CAAF7100F4E5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlacesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoursquarePlaces.app/FoursquarePlaces";
+			};
+			name = Debug;
+		};
+		13561ABA27CAAF7100F4E5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlacesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoursquarePlaces.app/FoursquarePlaces";
+			};
+			name = Release;
+		};
+		13561ABC27CAAF7100F4E5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlacesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoursquarePlaces;
+			};
+			name = Debug;
+		};
+		13561ABD27CAAF7100F4E5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8D29U4J3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hezardastan.foursquare.places.FoursquarePlacesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoursquarePlaces;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13561A8C27CAAF7000F4E5F6 /* Build configuration list for PBXProject "FoursquarePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13561AB327CAAF7100F4E5F6 /* Debug */,
+				13561AB427CAAF7100F4E5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13561AB527CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13561AB627CAAF7100F4E5F6 /* Debug */,
+				13561AB727CAAF7100F4E5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13561AB827CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13561AB927CAAF7100F4E5F6 /* Debug */,
+				13561ABA27CAAF7100F4E5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13561ABB27CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13561ABC27CAAF7100F4E5F6 /* Debug */,
+				13561ABD27CAAF7100F4E5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			productName = SwiftUIFlux;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 13561A8927CAAF7000F4E5F6 /* Project object */;
+}
