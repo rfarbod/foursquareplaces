@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */; };
-		13561A9727CAAF7000F4E5F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9627CAAF7000F4E5F6 /* ContentView.swift */; };
+		13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9627CAAF7000F4E5F6 /* HomeView.swift */; };
 		13561A9927CAAF7100F4E5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13561A9827CAAF7100F4E5F6 /* Assets.xcassets */; };
 		13561A9C27CAAF7100F4E5F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13561A9B27CAAF7100F4E5F6 /* Preview Assets.xcassets */; };
 		13561AA627CAAF7100F4E5F6 /* FoursquarePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AA527CAAF7100F4E5F6 /* FoursquarePlacesTests.swift */; };
 		13561AB027CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */; };
 		13561AB227CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */; };
 		13561AC027CAB03600F4E5F6 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */; };
+		13561AC827CAB29C00F4E5F6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AC727CAB29C00F4E5F6 /* AppState.swift */; };
+		13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AC927CAB2AA00F4E5F6 /* PlacesState.swift */; };
+		13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ACB27CAB2EA00F4E5F6 /* Place.swift */; };
+		13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ACD27CAB33800F4E5F6 /* Categories.swift */; };
+		13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ACF27CAB36400F4E5F6 /* Icon.swift */; };
+		13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD127CAB3C500F4E5F6 /* Geocode.swift */; };
+		13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD327CAB4AC00F4E5F6 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,7 @@
 /* Begin PBXFileReference section */
 		13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquarePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesApp.swift; sourceTree = "<group>"; };
-		13561A9627CAAF7000F4E5F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		13561A9627CAAF7000F4E5F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		13561A9827CAAF7100F4E5F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13561A9B27CAAF7100F4E5F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13561AA127CAAF7100F4E5F6 /* FoursquarePlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +52,13 @@
 		13561AAB27CAAF7100F4E5F6 /* FoursquarePlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITests.swift; sourceTree = "<group>"; };
 		13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13561AC727CAB29C00F4E5F6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		13561AC927CAB2AA00F4E5F6 /* PlacesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesState.swift; sourceTree = "<group>"; };
+		13561ACB27CAB2EA00F4E5F6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		13561ACD27CAB33800F4E5F6 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		13561ACF27CAB36400F4E5F6 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		13561AD127CAB3C500F4E5F6 /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		13561AD327CAB4AC00F4E5F6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +110,10 @@
 		13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				13561AC627CAB1B400F4E5F6 /* Model */,
+				13561AC527CAB1A500F4E5F6 /* Redux */,
 				13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */,
-				13561A9627CAAF7000F4E5F6 /* ContentView.swift */,
+				13561A9627CAAF7000F4E5F6 /* HomeView.swift */,
 				13561A9827CAAF7100F4E5F6 /* Assets.xcassets */,
 				13561A9A27CAAF7100F4E5F6 /* Preview Content */,
 			);
@@ -127,6 +143,59 @@
 				13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */,
 			);
 			path = FoursquarePlacesUITests;
+			sourceTree = "<group>";
+		};
+		13561AC127CAB17A00F4E5F6 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		13561AC227CAB18900F4E5F6 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
+		13561AC327CAB19100F4E5F6 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		13561AC427CAB1A100F4E5F6 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				13561AC727CAB29C00F4E5F6 /* AppState.swift */,
+				13561AC927CAB2AA00F4E5F6 /* PlacesState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		13561AC527CAB1A500F4E5F6 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				13561AC127CAB17A00F4E5F6 /* Actions */,
+				13561AC227CAB18900F4E5F6 /* Middlewares */,
+				13561AC327CAB19100F4E5F6 /* Reducers */,
+				13561AC427CAB1A100F4E5F6 /* State */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		13561AC627CAB1B400F4E5F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13561ACB27CAB2EA00F4E5F6 /* Place.swift */,
+				13561ACD27CAB33800F4E5F6 /* Categories.swift */,
+				13561ACF27CAB36400F4E5F6 /* Icon.swift */,
+				13561AD127CAB3C500F4E5F6 /* Geocode.swift */,
+				13561AD327CAB4AC00F4E5F6 /* Location.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13561A9727CAAF7000F4E5F6 /* ContentView.swift in Sources */,
+				13561AC827CAB29C00F4E5F6 /* AppState.swift in Sources */,
+				13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */,
+				13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */,
+				13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */,
+				13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */,
+				13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */,
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
+				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
+				13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
