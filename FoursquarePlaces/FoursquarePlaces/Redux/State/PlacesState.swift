@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import SwiftUIFlux
 
-struct PlacesState {
+struct PlacesState: FluxState {
     
+    var places = [Place]()
 }
 

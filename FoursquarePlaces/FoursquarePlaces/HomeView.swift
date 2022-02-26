@@ -9,11 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+        NavigationView {
         Text("Hello, world!")
             .padding()
+            .navigationTitle("Nearby Places")
         }
-    
-    
+    }
+
 }
 
 struct HomeView_Previews: PreviewProvider {

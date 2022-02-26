@@ -7,7 +7,9 @@
 
 import Foundation
 
-
+struct PlacesResult: Codable {
+    var results = [Place]()
+}
 struct Place: Codable {
     
     var fsqId = String()

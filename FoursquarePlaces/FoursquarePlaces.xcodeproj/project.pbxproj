@@ -22,6 +22,9 @@
 		13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ACF27CAB36400F4E5F6 /* Icon.swift */; };
 		13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD127CAB3C500F4E5F6 /* Geocode.swift */; };
 		13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD327CAB4AC00F4E5F6 /* Location.swift */; };
+		13561AD627CAB8A400F4E5F6 /* PlacesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD527CAB8A400F4E5F6 /* PlacesActions.swift */; };
+		13561AD827CABD2E00F4E5F6 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD727CABD2E00F4E5F6 /* AppReducer.swift */; };
+		13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		13561ACF27CAB36400F4E5F6 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		13561AD127CAB3C500F4E5F6 /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
 		13561AD327CAB4AC00F4E5F6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		13561AD527CAB8A400F4E5F6 /* PlacesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesActions.swift; sourceTree = "<group>"; };
+		13561AD727CABD2E00F4E5F6 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		13561AC127CAB17A00F4E5F6 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				13561AD527CAB8A400F4E5F6 /* PlacesActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -162,6 +169,8 @@
 		13561AC327CAB19100F4E5F6 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				13561AD727CABD2E00F4E5F6 /* AppReducer.swift */,
+				13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -335,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13561AC827CAB29C00F4E5F6 /* AppState.swift in Sources */,
+				13561AD827CABD2E00F4E5F6 /* AppReducer.swift in Sources */,
+				13561AD627CAB8A400F4E5F6 /* PlacesActions.swift in Sources */,
 				13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */,
 				13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */,
 				13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */,
@@ -343,6 +354,7 @@
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
 				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
 				13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */,
+				13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
