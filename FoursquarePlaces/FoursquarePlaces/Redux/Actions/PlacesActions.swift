@@ -12,8 +12,6 @@ struct PlacesActions {
     
     struct GetPlaces: AsyncAction {
         
-
-        
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
         }

@@ -25,6 +25,7 @@
 		13561AD627CAB8A400F4E5F6 /* PlacesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD527CAB8A400F4E5F6 /* PlacesActions.swift */; };
 		13561AD827CABD2E00F4E5F6 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD727CABD2E00F4E5F6 /* AppReducer.swift */; };
 		13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */; };
+		13561AE027CAC19300F4E5F6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ADF27CAC19300F4E5F6 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		13561AD527CAB8A400F4E5F6 /* PlacesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesActions.swift; sourceTree = "<group>"; };
 		13561AD727CABD2E00F4E5F6 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceReducer.swift; sourceTree = "<group>"; };
+		13561ADF27CAC19300F4E5F6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		13561AC527CAB1A500F4E5F6 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				13561ADE27CAC18A00F4E5F6 /* Store */,
 				13561AC127CAB17A00F4E5F6 /* Actions */,
 				13561AC227CAB18900F4E5F6 /* Middlewares */,
 				13561AC327CAB19100F4E5F6 /* Reducers */,
@@ -205,6 +208,14 @@
 				13561AD327CAB4AC00F4E5F6 /* Location.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13561ADE27CAC18A00F4E5F6 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				13561ADF27CAC19300F4E5F6 /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 				13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */,
 				13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */,
 				13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */,
+				13561AE027CAC19300F4E5F6 /* Store.swift in Sources */,
 				13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */,
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
 				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
