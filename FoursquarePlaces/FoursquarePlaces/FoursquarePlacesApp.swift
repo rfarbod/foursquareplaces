@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
 @main
 struct FoursquarePlacesApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            StoreProvider(store: store, content: {
+                HomeView()
+            })
         }
     }
 }

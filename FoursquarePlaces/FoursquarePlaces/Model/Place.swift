@@ -10,14 +10,22 @@ import Foundation
 struct PlacesResult: Codable {
     var results = [Place]()
 }
-struct Place: Codable {
-    
-    var fsq_id = String()
+struct Place: Codable,Identifiable {
+    var id = String()
     var categories = [Categories]()
     var distance = Double()
-    var geocodes = [Geocode]()
+    var geocodes = Geocode()
     var location = Location()
     var name = String()
     var timezone = String()
     
+    private enum CodingKeys : String, CodingKey {
+           case id = "fsq_id"
+           case categories
+           case distance
+           case geocodes
+           case location
+           case name
+           case timezone
+       }
 }

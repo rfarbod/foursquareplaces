@@ -32,6 +32,7 @@
 		13565E8427CB524100FE5E01 /* PlacesAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8327CB524100FE5E01 /* PlacesAPIs.swift */; };
 		13565E8727CB52D400FE5E01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8627CB52D400FE5E01 /* Constants.swift */; };
 		13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8827CB567E00FE5E01 /* Endpoints.swift */; };
+		13565E8B27CB71D300FE5E01 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8A27CB71D300FE5E01 /* PlaceView.swift */; };
 		4AAD993C799A91230F211C5A /* Pods_FoursquarePlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5742BE3BE766556102EB8EA /* Pods_FoursquarePlacesTests.framework */; };
 		EBB549F4FA2B8D517F3C8549 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594861FA1BB4353FDC8EE0F4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */; };
 		EF71B459D3B56074456EFED3 /* Pods_FoursquarePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDBD1F0E74B018C7D5D7A9E /* Pods_FoursquarePlaces.framework */; };
@@ -82,6 +83,7 @@
 		13565E8327CB524100FE5E01 /* PlacesAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPIs.swift; sourceTree = "<group>"; };
 		13565E8627CB52D400FE5E01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13565E8827CB567E00FE5E01 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		13565E8A27CB71D300FE5E01 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		1D845E547DF0DB1787F32A86 /* Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F9E1A8AD49BC228F6C18A0C /* Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5329137A030B68A821D4E03D /* Pods-FoursquarePlacesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlacesTests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlacesTests/Pods-FoursquarePlacesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				13561A9627CAAF7000F4E5F6 /* HomeView.swift */,
+				13565E8A27CB71D300FE5E01 /* PlaceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */,
 				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
 				13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */,
+				13565E8B27CB71D300FE5E01 /* PlaceView.swift in Sources */,
 				13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */,
 				13565E8727CB52D400FE5E01 /* Constants.swift in Sources */,
 			);

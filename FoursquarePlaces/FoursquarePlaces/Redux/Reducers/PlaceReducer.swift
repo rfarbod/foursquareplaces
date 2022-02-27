@@ -13,6 +13,9 @@ func placesStateReducer(state: PlacesState, action: Action) -> PlacesState {
     switch action {
     case let action as PlacesActions.SetPlaces:
         state.places = action.response.results
+        for each in state.places {
+            print(each.name)
+        }
     default:
         break
     }

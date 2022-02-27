@@ -9,11 +9,11 @@ import Foundation
 
 struct Location: Codable {
     
-    var address = String()
-    var country = String()
-    var cross_street = String()
-    var formatted_address = String()
-    var locality = String()
-    var postcode = String()
-    var region = String()
+    var address :String?
+    var country : String?
+    var cross_street : String?
+    var formatted_address : String?
+    var locality : String?
+    var postcode : String?
+    var region : String?
 }

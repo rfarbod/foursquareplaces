@@ -9,14 +9,24 @@ import SwiftUI
 import SwiftUIFlux
 
 struct HomeView: View {
-    private var networkService = NetworkService()
+    
+    @EnvironmentObject var store : Store<AppState>
+    
+    var places:[Place] {
+        return store.state.placesState.places
+    }
+    
     var body: some View {
         NavigationView {
-            
-        Text("Hello, world!")
-            .padding()
-            .navigationTitle("Nearby Places")
-            
+            if !places.isEmpty {
+                VStack {
+                ForEach(places) { place in
+                    Text(place.name)
+                }
+                }
+            }
+        }.onAppear {
+            store.dispatch(action: PlacesActions.GetPlaces())
         }
     }
 
