@@ -18,18 +18,28 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            if !places.isEmpty {
-                VStack {
-                ForEach(places) { place in
-                    Text(place.name)
-                }
+            ZStack {
+                Color(uiColor: .systemGray6)
+                ScrollView {
+                    if !places.isEmpty {
+                        VStack() {
+                            ForEach(places) { place in
+                                PlaceView(name: place.name)
+                            }
+                            .background(.clear)
+                            .padding([.leading, .trailing], 10)
+                        }
+                    }
                 }
             }
-        }.onAppear {
+            .navigationTitle("Nearby Places")
+        }
+        .onAppear {
             store.dispatch(action: PlacesActions.GetPlaces())
         }
+        
     }
-
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

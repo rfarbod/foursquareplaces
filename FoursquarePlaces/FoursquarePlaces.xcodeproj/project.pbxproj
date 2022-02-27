@@ -33,6 +33,12 @@
 		13565E8727CB52D400FE5E01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8627CB52D400FE5E01 /* Constants.swift */; };
 		13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8827CB567E00FE5E01 /* Endpoints.swift */; };
 		13565E8B27CB71D300FE5E01 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8A27CB71D300FE5E01 /* PlaceView.swift */; };
+		13565E9327CB962F00FE5E01 /* Vazir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E8D27CB962F00FE5E01 /* Vazir-Light.ttf */; };
+		13565E9427CB962F00FE5E01 /* Vazir-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E8E27CB962F00FE5E01 /* Vazir-Regular.ttf */; };
+		13565E9527CB962F00FE5E01 /* Vazir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E8F27CB962F00FE5E01 /* Vazir-Medium.ttf */; };
+		13565E9627CB962F00FE5E01 /* Vazir-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E9027CB962F00FE5E01 /* Vazir-Thin.ttf */; };
+		13565E9727CB962F00FE5E01 /* Vazir-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E9127CB962F00FE5E01 /* Vazir-Bold.ttf */; };
+		13565E9827CB962F00FE5E01 /* Vazir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13565E9227CB962F00FE5E01 /* Vazir-Black.ttf */; };
 		4AAD993C799A91230F211C5A /* Pods_FoursquarePlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5742BE3BE766556102EB8EA /* Pods_FoursquarePlacesTests.framework */; };
 		EBB549F4FA2B8D517F3C8549 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594861FA1BB4353FDC8EE0F4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */; };
 		EF71B459D3B56074456EFED3 /* Pods_FoursquarePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDBD1F0E74B018C7D5D7A9E /* Pods_FoursquarePlaces.framework */; };
@@ -84,6 +90,13 @@
 		13565E8627CB52D400FE5E01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13565E8827CB567E00FE5E01 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		13565E8A27CB71D300FE5E01 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		13565E8D27CB962F00FE5E01 /* Vazir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Light.ttf"; sourceTree = "<group>"; };
+		13565E8E27CB962F00FE5E01 /* Vazir-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Regular.ttf"; sourceTree = "<group>"; };
+		13565E8F27CB962F00FE5E01 /* Vazir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Medium.ttf"; sourceTree = "<group>"; };
+		13565E9027CB962F00FE5E01 /* Vazir-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Thin.ttf"; sourceTree = "<group>"; };
+		13565E9127CB962F00FE5E01 /* Vazir-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Bold.ttf"; sourceTree = "<group>"; };
+		13565E9227CB962F00FE5E01 /* Vazir-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vazir-Black.ttf"; sourceTree = "<group>"; };
+		13565E9927CB976900FE5E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D845E547DF0DB1787F32A86 /* Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F9E1A8AD49BC228F6C18A0C /* Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5329137A030B68A821D4E03D /* Pods-FoursquarePlacesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlacesTests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlacesTests/Pods-FoursquarePlacesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +162,8 @@
 		13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				13565E8C27CB962200FE5E01 /* Font */,
+				13565E9927CB976900FE5E01 /* Info.plist */,
 				13561AE227CAC24A00F4E5F6 /* Network */,
 				13561AE127CAC21300F4E5F6 /* Views */,
 				13561AC627CAB1B400F4E5F6 /* Model */,
@@ -296,6 +311,19 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		13565E8C27CB962200FE5E01 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				13565E9227CB962F00FE5E01 /* Vazir-Black.ttf */,
+				13565E9127CB962F00FE5E01 /* Vazir-Bold.ttf */,
+				13565E8D27CB962F00FE5E01 /* Vazir-Light.ttf */,
+				13565E8F27CB962F00FE5E01 /* Vazir-Medium.ttf */,
+				13565E8E27CB962F00FE5E01 /* Vazir-Regular.ttf */,
+				13565E9027CB962F00FE5E01 /* Vazir-Thin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		2864CD74626762CA25E01CBD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,8 +462,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13565E9427CB962F00FE5E01 /* Vazir-Regular.ttf in Resources */,
+				13565E9827CB962F00FE5E01 /* Vazir-Black.ttf in Resources */,
 				13561A9C27CAAF7100F4E5F6 /* Preview Assets.xcassets in Resources */,
+				13565E9727CB962F00FE5E01 /* Vazir-Bold.ttf in Resources */,
+				13565E9627CB962F00FE5E01 /* Vazir-Thin.ttf in Resources */,
 				13561A9927CAAF7100F4E5F6 /* Assets.xcassets in Resources */,
+				13565E9527CB962F00FE5E01 /* Vazir-Medium.ttf in Resources */,
+				13565E9327CB962F00FE5E01 /* Vazir-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +781,7 @@
 				DEVELOPMENT_TEAM = T8D29U4J3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoursquarePlaces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -777,6 +812,7 @@
 				DEVELOPMENT_TEAM = T8D29U4J3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoursquarePlaces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

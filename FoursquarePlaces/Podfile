@@ -8,6 +8,7 @@ target 'FoursquarePlaces' do
   # Pods for FoursquarePlaces
 
   pod 'Alamofire', '~> 5.5'
+  pod 'SDWebImageSwiftUI'
   
   target 'FoursquarePlacesTests' do
     inherit! :search_paths

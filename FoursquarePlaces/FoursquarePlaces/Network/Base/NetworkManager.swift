@@ -10,12 +10,16 @@ import Alamofire
 
 public protocol NetworkServiceProtocol: AnyObject {
     
-    func execute<T:Codable> (_ urlRequest: URLRequestBuilder, model: T.Type, completion: @escaping (Result<T,AFError>) -> Void)
+    func execute<T:Codable> (_ urlRequest: URLRequestBuilder,
+                             model: T.Type,
+                             completion: @escaping (Result<T,AFError>) -> Void)
 }
 
 public extension NetworkServiceProtocol {
     
-    func execute<T:Codable> (_ urlRequest: URLRequestBuilder, model: T.Type, completion: @escaping (Result<T,AFError>) -> Void) {
+    func execute<T:Codable> (_ urlRequest: URLRequestBuilder,
+                             model: T.Type,
+                             completion: @escaping (Result<T,AFError>) -> Void) {
         
         AF.request(urlRequest).responseDecodable(of: T.self) { result in
             if let value = result.value {
