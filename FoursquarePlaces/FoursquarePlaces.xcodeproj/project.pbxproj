@@ -14,7 +14,6 @@
 		13561AA627CAAF7100F4E5F6 /* FoursquarePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AA527CAAF7100F4E5F6 /* FoursquarePlacesTests.swift */; };
 		13561AB027CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AAF27CAAF7100F4E5F6 /* FoursquarePlacesUITests.swift */; };
 		13561AB227CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AB127CAAF7100F4E5F6 /* FoursquarePlacesUITestsLaunchTests.swift */; };
-		13561AC027CAB03600F4E5F6 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */; };
 		13561AC827CAB29C00F4E5F6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AC727CAB29C00F4E5F6 /* AppState.swift */; };
 		13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AC927CAB2AA00F4E5F6 /* PlacesState.swift */; };
 		13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ACB27CAB2EA00F4E5F6 /* Place.swift */; };
@@ -26,6 +25,16 @@
 		13561AD827CABD2E00F4E5F6 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD727CABD2E00F4E5F6 /* AppReducer.swift */; };
 		13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */; };
 		13561AE027CAC19300F4E5F6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561ADF27CAC19300F4E5F6 /* Store.swift */; };
+		13565E7A27CB4D7B00FE5E01 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 13565E7927CB4D7B00FE5E01 /* SwiftUIFlux */; };
+		13565E7C27CB4D9900FE5E01 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E7B27CB4D9900FE5E01 /* NetworkManager.swift */; };
+		13565E7E27CB4E7C00FE5E01 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E7D27CB4E7C00FE5E01 /* URLRequestBuilder.swift */; };
+		13565E8127CB4EA000FE5E01 /* AppEnvironement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8027CB4EA000FE5E01 /* AppEnvironement.swift */; };
+		13565E8427CB524100FE5E01 /* PlacesAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8327CB524100FE5E01 /* PlacesAPIs.swift */; };
+		13565E8727CB52D400FE5E01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8627CB52D400FE5E01 /* Constants.swift */; };
+		13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13565E8827CB567E00FE5E01 /* Endpoints.swift */; };
+		4AAD993C799A91230F211C5A /* Pods_FoursquarePlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5742BE3BE766556102EB8EA /* Pods_FoursquarePlacesTests.framework */; };
+		EBB549F4FA2B8D517F3C8549 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594861FA1BB4353FDC8EE0F4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */; };
+		EF71B459D3B56074456EFED3 /* Pods_FoursquarePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDBD1F0E74B018C7D5D7A9E /* Pods_FoursquarePlaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +76,21 @@
 		13561AD727CABD2E00F4E5F6 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		13561AD927CABE0600F4E5F6 /* PlaceReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceReducer.swift; sourceTree = "<group>"; };
 		13561ADF27CAC19300F4E5F6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		13565E7B27CB4D9900FE5E01 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		13565E7D27CB4E7C00FE5E01 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		13565E8027CB4EA000FE5E01 /* AppEnvironement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironement.swift; sourceTree = "<group>"; };
+		13565E8327CB524100FE5E01 /* PlacesAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPIs.swift; sourceTree = "<group>"; };
+		13565E8627CB52D400FE5E01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		13565E8827CB567E00FE5E01 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		1D845E547DF0DB1787F32A86 /* Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F9E1A8AD49BC228F6C18A0C /* Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5329137A030B68A821D4E03D /* Pods-FoursquarePlacesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlacesTests.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlacesTests/Pods-FoursquarePlacesTests.release.xcconfig"; sourceTree = "<group>"; };
+		594861FA1BB4353FDC8EE0F4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePlaces_FoursquarePlacesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDBD1F0E74B018C7D5D7A9E /* Pods_FoursquarePlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76735C35B23A99AF69E11CF4 /* Pods-FoursquarePlacesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlacesTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlacesTests/Pods-FoursquarePlacesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		803D126ECD1229DA3A091590 /* Pods-FoursquarePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces.debug.xcconfig"; sourceTree = "<group>"; };
+		B5742BE3BE766556102EB8EA /* Pods_FoursquarePlacesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePlacesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC10D2B65BC1B2387612954 /* Pods-FoursquarePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13561AC027CAB03600F4E5F6 /* SwiftUIFlux in Frameworks */,
+				EF71B459D3B56074456EFED3 /* Pods_FoursquarePlaces.framework in Frameworks */,
+				13565E7A27CB4D7B00FE5E01 /* SwiftUIFlux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAD993C799A91230F211C5A /* Pods_FoursquarePlacesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB549F4FA2B8D517F3C8549 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +129,8 @@
 				13561AA427CAAF7100F4E5F6 /* FoursquarePlacesTests */,
 				13561AAE27CAAF7100F4E5F6 /* FoursquarePlacesUITests */,
 				13561A9227CAAF7000F4E5F6 /* Products */,
+				2864CD74626762CA25E01CBD /* Pods */,
+				3912DDB5F0856232720E3B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +147,11 @@
 		13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				13561AE227CAC24A00F4E5F6 /* Network */,
+				13561AE127CAC21300F4E5F6 /* Views */,
 				13561AC627CAB1B400F4E5F6 /* Model */,
 				13561AC527CAB1A500F4E5F6 /* Redux */,
 				13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */,
-				13561A9627CAAF7000F4E5F6 /* HomeView.swift */,
 				13561A9827CAAF7100F4E5F6 /* Assets.xcassets */,
 				13561A9A27CAAF7100F4E5F6 /* Preview Content */,
 			);
@@ -218,6 +248,74 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		13561AE127CAC21300F4E5F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13561A9627CAAF7000F4E5F6 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13561AE227CAC24A00F4E5F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				13565E8527CB52BD00FE5E01 /* Constants */,
+				13565E8227CB523200FE5E01 /* Places */,
+				13561AE327CAC2D200F4E5F6 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		13561AE327CAC2D200F4E5F6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				13565E7B27CB4D9900FE5E01 /* NetworkManager.swift */,
+				13565E7D27CB4E7C00FE5E01 /* URLRequestBuilder.swift */,
+				13565E8827CB567E00FE5E01 /* Endpoints.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		13565E8227CB523200FE5E01 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				13565E8327CB524100FE5E01 /* PlacesAPIs.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		13565E8527CB52BD00FE5E01 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				13565E8027CB4EA000FE5E01 /* AppEnvironement.swift */,
+				13565E8627CB52D400FE5E01 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2864CD74626762CA25E01CBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				803D126ECD1229DA3A091590 /* Pods-FoursquarePlaces.debug.xcconfig */,
+				CCC10D2B65BC1B2387612954 /* Pods-FoursquarePlaces.release.xcconfig */,
+				1D845E547DF0DB1787F32A86 /* Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig */,
+				3F9E1A8AD49BC228F6C18A0C /* Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig */,
+				76735C35B23A99AF69E11CF4 /* Pods-FoursquarePlacesTests.debug.xcconfig */,
+				5329137A030B68A821D4E03D /* Pods-FoursquarePlacesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3912DDB5F0856232720E3B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBD1F0E74B018C7D5D7A9E /* Pods_FoursquarePlaces.framework */,
+				594861FA1BB4353FDC8EE0F4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */,
+				B5742BE3BE766556102EB8EA /* Pods_FoursquarePlacesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13561AB527CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlaces" */;
 			buildPhases = (
+				003D78385AF6B233BF918A23 /* [CP] Check Pods Manifest.lock */,
 				13561A8D27CAAF7000F4E5F6 /* Sources */,
 				13561A8E27CAAF7000F4E5F6 /* Frameworks */,
 				13561A8F27CAAF7000F4E5F6 /* Resources */,
+				49F360F7EB0A46873AFB5022 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,7 +335,7 @@
 			);
 			name = FoursquarePlaces;
 			packageProductDependencies = (
-				13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */,
+				13565E7927CB4D7B00FE5E01 /* SwiftUIFlux */,
 			);
 			productName = FoursquarePlaces;
 			productReference = 13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */;
@@ -245,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13561AB827CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesTests" */;
 			buildPhases = (
+				5AFAF1E21749B4B189B4227A /* [CP] Check Pods Manifest.lock */,
 				13561A9D27CAAF7100F4E5F6 /* Sources */,
 				13561A9E27CAAF7100F4E5F6 /* Frameworks */,
 				13561A9F27CAAF7100F4E5F6 /* Resources */,
@@ -263,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13561ABB27CAAF7100F4E5F6 /* Build configuration list for PBXNativeTarget "FoursquarePlacesUITests" */;
 			buildPhases = (
+				88E6A45E89A573952E1A6545 /* [CP] Check Pods Manifest.lock */,
 				13561AA727CAAF7100F4E5F6 /* Sources */,
 				13561AA827CAAF7100F4E5F6 /* Frameworks */,
 				13561AA927CAAF7100F4E5F6 /* Resources */,
+				B9773EB5E973D4E9E6A8DA6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,7 +413,7 @@
 			);
 			mainGroup = 13561A8827CAAF7000F4E5F6;
 			packageReferences = (
-				13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+				13565E7827CB4D7B00FE5E01 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 			);
 			productRefGroup = 13561A9227CAAF7000F4E5F6 /* Products */;
 			projectDirPath = "";
@@ -349,6 +452,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		003D78385AF6B233BF918A23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquarePlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49F360F7EB0A46873AFB5022 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AFAF1E21749B4B189B4227A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquarePlacesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88E6A45E89A573952E1A6545 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquarePlaces-FoursquarePlacesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9773EB5E973D4E9E6A8DA6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoursquarePlaces-FoursquarePlacesUITests/Pods-FoursquarePlaces-FoursquarePlacesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13561A8D27CAAF7000F4E5F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -357,16 +563,22 @@
 				13561AC827CAB29C00F4E5F6 /* AppState.swift in Sources */,
 				13561AD827CABD2E00F4E5F6 /* AppReducer.swift in Sources */,
 				13561AD627CAB8A400F4E5F6 /* PlacesActions.swift in Sources */,
+				13565E8427CB524100FE5E01 /* PlacesAPIs.swift in Sources */,
 				13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */,
 				13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */,
 				13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */,
+				13565E8127CB4EA000FE5E01 /* AppEnvironement.swift in Sources */,
 				13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */,
 				13561AE027CAC19300F4E5F6 /* Store.swift in Sources */,
 				13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */,
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
+				13565E7C27CB4D9900FE5E01 /* NetworkManager.swift in Sources */,
+				13565E7E27CB4E7C00FE5E01 /* URLRequestBuilder.swift in Sources */,
+				13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */,
 				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
 				13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */,
 				13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */,
+				13565E8727CB52D400FE5E01 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +733,7 @@
 		};
 		13561AB627CAAF7100F4E5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803D126ECD1229DA3A091590 /* Pods-FoursquarePlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +763,7 @@
 		};
 		13561AB727CAAF7100F4E5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC10D2B65BC1B2387612954 /* Pods-FoursquarePlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +793,7 @@
 		};
 		13561AB927CAAF7100F4E5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76735C35B23A99AF69E11CF4 /* Pods-FoursquarePlacesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +814,7 @@
 		};
 		13561ABA27CAAF7100F4E5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5329137A030B68A821D4E03D /* Pods-FoursquarePlacesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -619,6 +835,7 @@
 		};
 		13561ABC27CAAF7100F4E5F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D845E547DF0DB1787F32A86 /* Pods-FoursquarePlaces-FoursquarePlacesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -637,6 +854,7 @@
 		};
 		13561ABD27CAAF7100F4E5F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F9E1A8AD49BC228F6C18A0C /* Pods-FoursquarePlaces-FoursquarePlacesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -695,20 +913,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+		13565E7827CB4D7B00FE5E01 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		13561ABF27CAB03600F4E5F6 /* SwiftUIFlux */ = {
+		13565E7927CB4D7B00FE5E01 /* SwiftUIFlux */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 13561ABE27CAB03500F4E5F6 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			package = 13565E7827CB4D7B00FE5E01 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
 			productName = SwiftUIFlux;
 		};
 /* End XCSwiftPackageProductDependency section */

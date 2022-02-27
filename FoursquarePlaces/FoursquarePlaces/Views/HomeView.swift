@@ -9,11 +9,14 @@ import SwiftUI
 import SwiftUIFlux
 
 struct HomeView: View {
+    private var networkService = NetworkService()
     var body: some View {
         NavigationView {
+            
         Text("Hello, world!")
             .padding()
             .navigationTitle("Nearby Places")
+            
         }
     }
 

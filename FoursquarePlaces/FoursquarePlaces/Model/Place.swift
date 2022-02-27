@@ -12,7 +12,7 @@ struct PlacesResult: Codable {
 }
 struct Place: Codable {
     
-    var fsqId = String()
+    var fsq_id = String()
     var categories = [Categories]()
     var distance = Double()
     var geocodes = [Geocode]()
