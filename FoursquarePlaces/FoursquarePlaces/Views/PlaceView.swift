@@ -10,7 +10,22 @@ import SDWebImageSwiftUI
 
 struct PlaceView: View {
     
-    @State var name = String()
+    @State var place : Place
+    
+    func buildImageURL() -> URL?{
+        if let photos = place.photos {
+            if photos.isEmpty == false {
+                let prefix =  photos[0].prefix
+                let suffix = photos[0].suffix
+                let imageUrl = "\(prefix)200x200\(suffix)"
+                return URL(string: imageUrl)
+            }else{
+                return URL(string: Path.Photos.noImage)
+            }
+        }else{
+            return URL(string: Path.Photos.noImage)
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -21,7 +36,7 @@ struct PlaceView: View {
                 .background(.white)
             
             HStack{
-                WebImage(url: URL(string: "https://fastly.4sqi.net/img/general/original/386427136_I5e039H76JppC17htf_W1O024KONpSL6cjmJVsjqps0.jpg")!)
+                WebImage(url: buildImageURL())
                     .resizable()
                     .frame(width: 85, height: 85)
                     .aspectRatio(contentMode: .fit)
@@ -30,7 +45,7 @@ struct PlaceView: View {
 
                 Spacer()
                 
-                Text(name)
+                Text(place.name)
                     .multilineTextAlignment(.trailing)
                     .padding(.trailing, 10)
                     .font(Font.custom("Vazir-Medium", size: 14))
@@ -43,8 +58,3 @@ struct PlaceView: View {
     }
 }
 
-struct PlaceView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceView()
-    }
-}

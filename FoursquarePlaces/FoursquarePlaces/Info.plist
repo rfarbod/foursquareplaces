@@ -4,7 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Vazir-Medium</string>
+		<string>Vazir-Thin.ttf</string>
+		<string>Vazir-Regular.ttf</string>
+		<string>Vazir-Light.ttf</string>
+		<string>Vazir-Bold.ttf</string>
+		<string>Vazir-Black.ttf</string>
+		<string>Vazir-Medium.ttf</string>
 	</array>
 </dict>
 </plist>

@@ -24,16 +24,24 @@ struct HomeView: View {
                 if !places.isEmpty {
                     List {
                         ForEach(places) { place in
-                            PlaceView(name: place.name)
+                            PlaceView(place: place)
                                 .onAppear {
                                     if place == self.places.last {
                                         store.dispatch(action: PlacesActions.GetPlaces())
+                                        
                                     }
                                 }
+                                .background(.clear)
                         }
                         .background(.clear)
                         .padding([.leading, .trailing], 10)
+                        .listRowSeparator(.hidden)
+                        
                     }
+                    .background(.clear)
+                    .animation(.default,value: places.count)
+                    .listRowSeparator(.hidden)
+                   
                 }
             }
             .navigationTitle("Nearby Places")

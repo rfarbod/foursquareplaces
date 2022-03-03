@@ -20,9 +20,8 @@ public extension NetworkServiceProtocol {
     func execute<T:Codable> (_ urlRequest: URLRequestBuilder,
                              model: T.Type,
                              completion: @escaping ((Result<T,AFError>,String) -> Void)) {
-        
         AF.request(urlRequest).responseDecodable(of: T.self) { result in
-            var nextPageCursor: String = "" 
+            var nextPageCursor: String = ""
             if let headers = result.response?.headers {
                 if let linkUnwrapped = headers.dictionary["Link"] {
                     var link = linkUnwrapped
