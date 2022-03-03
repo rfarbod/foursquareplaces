@@ -9,7 +9,7 @@ import Foundation
 
 enum Path {
     enum Places {
-        public static let getPlaces = "places/nearby"
+        public static let getPlaces = "places/search"
     }
 }
 

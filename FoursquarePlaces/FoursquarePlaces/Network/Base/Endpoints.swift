@@ -8,15 +8,15 @@
 import Foundation
 
 public enum Endpoints {
-    case getPlaces(Double,Double)
+    case getPlaces(Double,Double,String = "")
 }
 
 public extension Endpoints {
     
     func resolve() -> URLRequestBuilder {
         switch self {
-        case .getPlaces(let lat, let long):
-            return PlacesAPIs.getPlaces(lat, long)
+        case .getPlaces(let lat, let long, let cursor):
+            return PlacesAPIs.getPlaces(lat, long,cursor)
         }
     }
 }

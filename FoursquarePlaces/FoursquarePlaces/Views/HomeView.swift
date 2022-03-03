@@ -20,17 +20,20 @@ struct HomeView: View {
         NavigationView {
             ZStack {
                 Color(uiColor: .systemGray6)
-                ScrollView {
                     if !places.isEmpty {
-                        VStack() {
+                        List {
                             ForEach(places) { place in
                                 PlaceView(name: place.name)
+                                    .onAppear {
+                                        if place == self.places.last {
+                                            store.dispatch(action: PlacesActions.GetPlaces())
+                                        }
+                                    }
                             }
                             .background(.clear)
                             .padding([.leading, .trailing], 10)
                         }
                     }
-                }
             }
             .navigationTitle("Nearby Places")
         }

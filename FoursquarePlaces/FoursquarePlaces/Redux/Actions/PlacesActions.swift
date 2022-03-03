@@ -13,7 +13,14 @@ struct PlacesActions {
     struct GetPlaces: AsyncAction {
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-            NetworkService.default.execute(Endpoints.getPlaces(35.765833, 51.4257523).resolve(), model: PlacesResult.self) { result in
+            var urlReuqest:URLRequestBuilder
+            if  store.state.nextPageCursorState.isEmpty {
+                urlReuqest = Endpoints.getPlaces(35.765833, 51.4257523).resolve()
+            }else{
+                urlReuqest = Endpoints.getPlaces(35.765833, 51.4257523, store.state.nextPageCursorState).resolve()
+            }
+            NetworkService.default.execute(urlReuqest, model: PlacesResult.self) { result in
+                
                 switch result {
                 case let .success(response):
                     dispatch(SetPlaces(response: response))

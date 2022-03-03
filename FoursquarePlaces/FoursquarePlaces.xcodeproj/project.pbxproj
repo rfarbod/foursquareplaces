@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132E4D1E27D0C34C00C4B001 /* URL .swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E4D1D27D0C34C00C4B001 /* URL .swift */; };
+		132E4D2027D0C92500C4B001 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E4D1F27D0C92500C4B001 /* String.swift */; };
 		13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */; };
 		13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13561A9627CAAF7000F4E5F6 /* HomeView.swift */; };
 		13561A9927CAAF7100F4E5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13561A9827CAAF7100F4E5F6 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		132E4D1D27D0C34C00C4B001 /* URL .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL .swift"; sourceTree = "<group>"; };
+		132E4D1F27D0C92500C4B001 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		13561A9127CAAF7000F4E5F6 /* FoursquarePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquarePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesApp.swift; sourceTree = "<group>"; };
 		13561A9627CAAF7000F4E5F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		132E4D1C27D0C33E00C4B001 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				132E4D1D27D0C34C00C4B001 /* URL .swift */,
+				132E4D1F27D0C92500C4B001 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		13561A8827CAAF7000F4E5F6 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 		13561A9327CAAF7000F4E5F6 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				132E4D1C27D0C33E00C4B001 /* Extensions */,
 				13565E8C27CB962200FE5E01 /* Font */,
 				13565E9927CB976900FE5E01 /* Info.plist */,
 				13561AE227CAC24A00F4E5F6 /* Network */,
@@ -604,10 +618,12 @@
 				13561ACA27CAB2AA00F4E5F6 /* PlacesState.swift in Sources */,
 				13561AD227CAB3C500F4E5F6 /* Geocode.swift in Sources */,
 				13561AD027CAB36400F4E5F6 /* Icon.swift in Sources */,
+				132E4D1E27D0C34C00C4B001 /* URL .swift in Sources */,
 				13565E8127CB4EA000FE5E01 /* AppEnvironement.swift in Sources */,
 				13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */,
 				13561AE027CAC19300F4E5F6 /* Store.swift in Sources */,
 				13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */,
+				132E4D2027D0C92500C4B001 /* String.swift in Sources */,
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
 				13565E7C27CB4D9900FE5E01 /* NetworkManager.swift in Sources */,
 				13565E7E27CB4E7C00FE5E01 /* URLRequestBuilder.swift in Sources */,

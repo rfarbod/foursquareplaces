@@ -8,9 +8,10 @@
 import Foundation
 
 struct PlacesResult: Codable {
+    
     var results = [Place]()
 }
-struct Place: Codable,Identifiable {
+struct Place: Codable,Identifiable,Equatable {
     var id = String()
     var categories = [Categories]()
     var distance = Double()
@@ -28,4 +29,10 @@ struct Place: Codable,Identifiable {
            case name
            case timezone
        }
+    
+    static func == (lhs: Place, rhs: Place) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
 }

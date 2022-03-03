@@ -10,7 +10,7 @@ import Alamofire
 
 enum PlacesAPIs: URLRequestBuilder {
     
-    case getPlaces(Double,Double)
+    case getPlaces(Double,Double,String = "")
     
 }
 
@@ -26,8 +26,13 @@ extension PlacesAPIs {
 extension PlacesAPIs {
     var parameters: Parameters? {
         switch self {
-        case .getPlaces(let lattitude, let longitude):
-            return ["ll": "\(lattitude),\(longitude)"]
+        case .getPlaces(let lattitude, let longitude, let cursor):
+            if cursor.isEmpty {
+                return ["ll": "\(lattitude),\(longitude)","limit": 10]
+            }else{
+                return ["ll":"\(lattitude),\(longitude)","limit": 10, "cursor": cursor]
+            }
+          
         }
     }
 }
