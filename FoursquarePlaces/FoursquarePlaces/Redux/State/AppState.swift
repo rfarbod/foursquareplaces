@@ -11,5 +11,5 @@ import SwiftUIFlux
 struct AppState: FluxState {
     
     var placesState = PlacesState()
-    var nextPageCursorState = String()
+    
 }
