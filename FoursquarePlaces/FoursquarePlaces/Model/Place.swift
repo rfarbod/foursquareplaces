@@ -9,16 +9,20 @@ import Foundation
 
 struct PlacesResult: Codable {
     
-    var results = [Place]()
+    let results : [Place]
 }
 struct Place: Codable,Identifiable,Equatable {
-    var id = String()
-    var categories = [Categories]()
-    var distance = Double()
-    var geocodes = Geocode()
-    var location = Location()
-    var name = String()
-    var timezone = String()
+    let id : String
+    let categories : [Categories]?
+    let distance : Double
+    let geocodes : Geocode
+    let location : Location
+    let name : String
+    let timezone : String
+    let hours: Hours?
+    let photos: [Photo]?
+    let social_media: SocialMedia?
+    let verified: Bool?
     
     private enum CodingKeys : String, CodingKey {
            case id = "fsq_id"
@@ -28,6 +32,10 @@ struct Place: Codable,Identifiable,Equatable {
            case location
            case name
            case timezone
+           case hours
+           case photos
+           case social_media
+           case verified
        }
     
     static func == (lhs: Place, rhs: Place) -> Bool {

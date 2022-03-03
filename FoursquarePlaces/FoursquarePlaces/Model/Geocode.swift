@@ -11,12 +11,12 @@ import Foundation
 
 struct Geocode: Codable {
     
-    var main = MainGeocode()
+    let main : MainGeocode
     
 }
 
 struct MainGeocode: Codable {
-    var latitude = Double()
-    var longitude = Double()
+    let latitude : Double
+    let longitude : Double
 
 }

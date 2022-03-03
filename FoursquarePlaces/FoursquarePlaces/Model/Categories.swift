@@ -9,8 +9,8 @@ import Foundation
 
 class Categories: Codable {
     
-    var id = Int()
-    var name = String()
-    var icon = Icon()
+    let id : Int
+    let name : String
+    let icon : Icon
     
 }

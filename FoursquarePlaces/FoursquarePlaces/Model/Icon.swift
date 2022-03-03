@@ -9,6 +9,6 @@ import Foundation
 
 struct Icon: Codable {
     
-    var prefix = String()
-    var suffix = String()
+    let prefix : String
+    let suffix : String
 }

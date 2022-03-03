@@ -22,7 +22,7 @@ public extension NetworkServiceProtocol {
                              completion: @escaping ((Result<T,AFError>,String) -> Void)) {
         
         AF.request(urlRequest).responseDecodable(of: T.self) { result in
-            var nextPageCursor = String()
+            var nextPageCursor: String = "" 
             if let headers = result.response?.headers {
                 if let linkUnwrapped = headers.dictionary["Link"] {
                     var link = linkUnwrapped
