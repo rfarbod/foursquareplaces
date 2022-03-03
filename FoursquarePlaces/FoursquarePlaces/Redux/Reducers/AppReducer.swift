@@ -11,5 +11,6 @@ import SwiftUIFlux
 func appStateReducer(state: AppState, action: Action) -> AppState {
     var state = state
     state.placesState =  placesStateReducer(state: state.placesState, action: action)
+    state.locationState = locationReducer(state: state.locationState, action: action)
     return state
 }

@@ -38,10 +38,13 @@ struct PlaceView: View {
             HStack{
                 WebImage(url: buildImageURL())
                     .resizable()
+                    .indicator(.activity)
+                    .transition(.fade(duration: 0.5))
                     .frame(width: 85, height: 85)
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
                     .background(.clear)
+                    
 
                 Spacer()
                 

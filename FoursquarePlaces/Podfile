@@ -6,10 +6,10 @@ target 'FoursquarePlaces' do
   use_frameworks!
 
   # Pods for FoursquarePlaces
-
-  pod 'Alamofire', '~> 5.5'
+  pod 'Alamofire' 
   pod 'SDWebImageSwiftUI'
-  
+  pod 'RealmSwift'
+
   target 'FoursquarePlacesTests' do
     inherit! :search_paths
     # Pods for testing

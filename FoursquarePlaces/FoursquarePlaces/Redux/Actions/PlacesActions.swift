@@ -17,8 +17,8 @@ struct PlacesActions {
                 return
             }
             urlReuqest = Endpoints.getPlaces(
-                35.765833,
-                51.4257523,
+                state.locationState.userLat,
+                state.locationState.userLong,
                 state.placesState.nextPageCursorState,
                 state.placesState.currentRadiusState)
                 .resolve()

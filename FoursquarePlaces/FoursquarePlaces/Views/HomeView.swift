@@ -16,6 +16,14 @@ struct HomeView: View {
         return store.state.placesState.places
     }
     
+    var userLat: Double {
+        return store.state.locationState.userLat
+    }
+    
+    var userLong:Double {
+        return store.state.locationState.userLong
+    }
+    
     
     var body: some View {
         NavigationView {
@@ -46,12 +54,17 @@ struct HomeView: View {
             }
             .navigationTitle("Nearby Places")
         }
-        .onAppear {
+        .onChange(of: userLat, perform: { newValue in
             store.dispatch(action: PlacesActions.GetPlaces())
-        }
+        })
+        .onAppear {
+            if userLat.isZero {
+                LocationManager.shared.start()
+            }
         
     }
     
+}
 }
 
 struct HomeView_Previews: PreviewProvider {
