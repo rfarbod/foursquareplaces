@@ -11,7 +11,8 @@ import SDWebImageSwiftUI
 struct PlaceView: View {
     
     @State var place : Place
-    
+    @Environment(\.colorScheme) var colorScheme
+
     func buildImageURL() -> URL?{
         if let photos = place.photos {
             if photos.isEmpty == false {
@@ -31,10 +32,6 @@ struct PlaceView: View {
         ZStack {
             //            Color(uiColor: .white)
             
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.gray, lineWidth: 1)
-                .background(.white)
-            
             HStack{
                 WebImage(url: buildImageURL())
                     .resizable()
@@ -49,12 +46,14 @@ struct PlaceView: View {
                 Spacer()
                 
                 Text(place.name)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .multilineTextAlignment(.trailing)
                     .padding(.trailing, 10)
                     .font(Font.custom("Vazir-Medium", size: 14))
                     .background(.clear)
             }
-            .background(.clear)
+            .background(colorScheme == .dark ? Color(uiColor: .systemGray3) : Color(uiColor: .systemGray6))
+            .cornerRadius(15)
         }
         .background(.clear)
 

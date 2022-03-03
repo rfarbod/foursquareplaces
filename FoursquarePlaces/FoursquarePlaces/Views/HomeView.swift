@@ -28,7 +28,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(uiColor: .systemGray6)
                 if !places.isEmpty {
                     List {
                         ForEach(places) { place in
