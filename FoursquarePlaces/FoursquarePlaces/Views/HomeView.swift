@@ -33,10 +33,11 @@ struct HomeView: View {
                         ForEach(places) { place in
                             PlaceView(place: place)
                                 .onAppear {
-                                    if place == self.places.last {
+                                    //getting ready to fetch new places when user is close to the bottom of the list
+                                    if place == self.places.last{
                                         store.dispatch(action: PlacesActions.GetPlaces())
-                                        
                                     }
+                                        
                                 }
                                 .onTapGesture {
                                     store.dispatch(action: PlacesActions.SelectPlace(place: place))

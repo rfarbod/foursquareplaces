@@ -18,7 +18,9 @@ struct PlaceView: View {
             if photos.isEmpty == false {
                 let prefix =  photos[0].prefix
                 let suffix = photos[0].suffix
-                let imageUrl = "\(prefix)200x200\(suffix)"
+                guard let prefixUnwrapped = prefix else {return nil }
+                guard let suffixUnwrapped = suffix else {return nil}
+                let imageUrl = "\(prefixUnwrapped)200x200\(suffixUnwrapped)"
                 return URL(string: imageUrl)
             }else{
                 return URL(string: Path.Photos.noImage)

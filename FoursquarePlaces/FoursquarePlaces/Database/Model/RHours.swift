@@ -9,9 +9,9 @@ import Foundation
 import RealmSwift
 
 class RHours: Object {
-    dynamic var display = String()
-    dynamic var is_local_holiday = Bool()
-    dynamic var open_now = Bool()
+    @objc dynamic var display : String? = nil
+    @objc dynamic var is_local_holiday: Bool = false
+    @objc dynamic var open_now : Bool = false
 }
 
 

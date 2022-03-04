@@ -12,15 +12,19 @@ import RealmSwift
 
 class RPlace: Object {
     
-    dynamic var id = String()
-    dynamic var categories : [RCategories]? = nil
-    dynamic var distance = Double()
-    dynamic var geocodes = RGeocode()
-    dynamic var location = RLocation()
-    dynamic var name = String()
-    dynamic var timezone = String()
-    dynamic var hours : RHours? = nil
-    dynamic var photos: [RPhoto]? = nil
-    dynamic var social_media : RSocialMedia? = nil
-    dynamic var verified = false
+    @objc dynamic var id : String? = nil
+    var categories : [RCategories]? = nil
+    @objc dynamic var distance : Double = 0
+    var geocodes : RGeocode? = nil
+    var location : RLocation? = nil
+    @objc dynamic var name : String? = nil
+    @objc dynamic var timezone : String? = nil
+    var hours : RHours? = nil
+    var photos: [RPhoto]? = nil
+    var social_media : RSocialMedia? = nil
+    @objc dynamic var verified :Bool = false
+    
+    override class func primaryKey() -> String? {
+        return  "id"
+    }
 }

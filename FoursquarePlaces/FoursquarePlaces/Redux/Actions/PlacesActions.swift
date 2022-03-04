@@ -58,7 +58,8 @@ struct PlacesActions {
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
-            let urlRequest = Endpoints.getPlaceDetails(store.state.placesState.selectedPlace.id).resolve()
+            guard let id = store.state.placesState.selectedPlace.id else {return}
+            let urlRequest = Endpoints.getPlaceDetails(id).resolve()
         
             
             NetworkService.default.execute(urlRequest, model: Place.self) { result, cursor in
@@ -66,7 +67,7 @@ struct PlacesActions {
                 case let .success(place):
                     guard let hours = place.hours else{return}
                     guard let social_media = place.social_media else{return}
-                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id , hours: hours, socialMedia: social_media))
+                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id ?? "" , hours: hours, socialMedia: social_media))
                 case let .failure(error):
                     print(error)
                 }

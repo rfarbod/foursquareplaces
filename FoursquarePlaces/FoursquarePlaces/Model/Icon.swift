@@ -16,8 +16,8 @@ struct Icon: Codable {
 extension Icon: Persistable {
    
     public init(managedObject: RIcon) {
-        suffix = managedObject.suffix
-        prefix = managedObject.prefix
+        suffix = managedObject.suffix ?? ""
+        prefix = managedObject.prefix ?? ""
     }
     public func managedObject() -> RIcon {
         let icon = RIcon()

@@ -9,10 +9,10 @@ import Foundation
 import RealmSwift
 
 class RPhoto: Object {
-    dynamic var created_at = String()
-    dynamic var prefix = String()
-    dynamic var suffix = String()
-    dynamic var width =  Double()
-    dynamic var height = Double()
-    dynamic var classifications: [String]? = nil 
+    @objc dynamic var created_at: String? = nil
+    @objc dynamic var prefix : String? = nil
+    @objc dynamic var suffix : String? = nil
+    @objc dynamic var width : Double = 0
+    @objc dynamic var height : Double = 0
+    var classifications: [String]? = nil 
 }

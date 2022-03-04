@@ -10,7 +10,11 @@ import RealmSwift
 
 class  RCategories: Object {
     
-    dynamic var id = Int()
-    dynamic var name  = String()
-    dynamic var icon = RIcon()
+    @objc dynamic var id : Int = 0
+    @objc dynamic var name : String? = nil
+    var icon : RIcon? = nil
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }

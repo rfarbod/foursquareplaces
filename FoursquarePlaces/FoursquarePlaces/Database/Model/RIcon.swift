@@ -10,6 +10,7 @@ import RealmSwift
 
 class RIcon: Object {
     
-    dynamic var suffix = String()
-    dynamic var prefix = String()
+    @objc dynamic var suffix : String? = nil
+    @objc dynamic var prefix : String? = nil
+    
 }

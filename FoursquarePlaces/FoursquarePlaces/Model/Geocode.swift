@@ -11,7 +11,7 @@ import Foundation
 
 struct Geocode: Codable {
     
-    let main : MainGeocode
+    let main : MainGeocode?
     
 }
 
@@ -36,11 +36,17 @@ extension MainGeocode: Persistable{
 extension Geocode: Persistable {
     
     public init(managedObject: RGeocode) {
-        main = MainGeocode(managedObject: managedObject.main)
+        if let managed = managedObject.main {
+        main = MainGeocode(managedObject: managed)
+        }else{
+            main = nil
+        }
     }
     public func managedObject() -> RGeocode {
        let geocode = RGeocode()
-        geocode.main = main.managedObject()
+        if let main = main {
+            geocode.main = main.managedObject()
+        }
         return geocode
     }
 }

@@ -8,7 +8,43 @@
 import Foundation
 import Realm
 import RealmSwift
-public final class WriteTransaction {
+import SwiftUI
+
+public protocol DatabaseServiceProtocol: AnyObject {
+    func addToDatabase <T:Persistable> (_ value: T)
+    func addBatchItemsToDatabase <T:Persistable> (_ values: [T])
+}
+public extension DatabaseServiceProtocol {
+    
+    func addToDatabase<T>(_ value: T) where T : Persistable {
+        
+        let container = try! Container()
+        try! container.write({ transaction in
+            transaction.add(value, update: .modified)
+        })
+    }
+    
+    
+    func addBatchItemsToDatabase<T>(_ values: [T]) where T : Persistable {
+         let container = try! Container()
+        for each in values {
+            try! container.write({ transaction in
+                transaction.add(each, update: .modified)
+            })
+        }
+    }
+    
+}
+public class DatabaseService: DatabaseServiceProtocol {
+
+    public static let `default`: DatabaseServiceProtocol = {
+        var service = DatabaseService()
+        return service
+    }()
+}
+    
+
+private final class WriteTransaction {
     private let realm: Realm
     internal init(realm: Realm) {
         self.realm = realm
@@ -18,7 +54,7 @@ public final class WriteTransaction {
     }
 }
 
-public final class Container {
+private final class Container {
     private let realm: Realm
     public convenience init() throws {
         try self.init(realm: Realm())

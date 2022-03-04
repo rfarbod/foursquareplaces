@@ -11,10 +11,10 @@ import RealmSwift
 
 class RGeocode: Object {
     
-    dynamic var main = RMainGeocode()
+    @objc dynamic var main : RMainGeocode? = nil
 }
 
 class RMainGeocode: Object {
-    dynamic var lattitud = Double()
-    dynamic var longitude = Double()
+    @objc dynamic var lattitud: Double = 0
+    @objc dynamic var longitude: Double = 0
 }

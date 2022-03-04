@@ -9,9 +9,9 @@ import Foundation
 
 struct Hours: Codable {
     
-    let display: String
-    let is_local_holiday: Bool
-    let open_now: Bool
+    let display: String?
+    let is_local_holiday: Bool?
+    let open_now: Bool?
     
 }
 
@@ -25,8 +25,8 @@ extension Hours: Persistable {
         public func managedObject() -> RHours {
             let hours = RHours()
             hours.display = display
-            hours.open_now = open_now
-            hours.is_local_holiday = is_local_holiday
+            hours.open_now = open_now ?? false
+            hours.is_local_holiday = is_local_holiday ?? false
             return hours
         }
 

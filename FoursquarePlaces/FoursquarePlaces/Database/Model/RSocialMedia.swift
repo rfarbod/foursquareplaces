@@ -11,6 +11,6 @@ import RealmSwift
 
 class RSocialMedia: Object {
 
-    dynamic var instagram = String()
-    dynamic var twitter = String()
+    @objc dynamic var instagram: String? = nil
+    @objc dynamic var twitter : String? = nil 
 }

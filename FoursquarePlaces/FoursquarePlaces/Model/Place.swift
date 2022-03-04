@@ -13,7 +13,7 @@ struct PlacesResult: Codable {
 }
 struct Place: Codable,Identifiable,Equatable {
     
-    var id : String
+    var id : String?
     var categories : [Categories]?
     var distance : Double?
     var geocodes : Geocode?
@@ -50,11 +50,15 @@ extension Place: Persistable {
     public init(managedObject: RPlace) {
         id = managedObject.id
         distance = managedObject.distance
-        geocodes = Geocode(managedObject: managedObject.geocodes)
-        location = Location(managedObject: managedObject.location)
         name = managedObject.name
         timezone = managedObject.timezone
         verified = managedObject.verified
+        if let geocode = managedObject.geocodes {
+            geocodes = Geocode(managedObject: geocode)
+        }
+        if let managedLocation = managedObject.location {
+            location = Location(managedObject: managedLocation)
+        }
         if let socialMedia = managedObject.social_media {
         social_media = SocialMedia(managedObject: socialMedia)
         }
