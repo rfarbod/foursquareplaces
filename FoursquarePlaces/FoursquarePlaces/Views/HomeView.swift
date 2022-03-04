@@ -38,6 +38,10 @@ struct HomeView: View {
                                         
                                     }
                                 }
+                                .onTapGesture {
+                                    store.dispatch(action: PlacesActions.SelectPlace(place: place))
+                                    store.dispatch(action: PlacesActions.GetPlaceDetails())
+                                }
                                 .background(.clear)
                         }
                         .background(.clear)

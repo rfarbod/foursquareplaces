@@ -18,7 +18,6 @@ public final class WriteTransaction {
     }
 }
 
-// Implement the Container
 public final class Container {
     private let realm: Realm
     public convenience init() throws {

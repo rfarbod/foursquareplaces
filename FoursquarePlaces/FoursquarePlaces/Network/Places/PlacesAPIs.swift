@@ -17,10 +17,13 @@ enum PlaceFields: String {
     case timezone = "timezone"
     case distance = "distance"
     case photos   = "photos"
+    case hours = "hours"
+    case social_media = "social_media"
 }
 enum PlacesAPIs: URLRequestBuilder {
     
     case getPlaces(Double,Double,String = "",Int)
+    case getPlaceDetails(String)
     
 }
 
@@ -29,6 +32,8 @@ extension PlacesAPIs {
         switch self {
         case .getPlaces:
             return Path.Places.getPlaces
+        case .getPlaceDetails(let fsqId):
+            return "\(Path.Places.getPlaceDetails)\(fsqId)"
         }
     }
 }
@@ -40,6 +45,10 @@ extension PlacesAPIs {
             let fields: String =
             "\(PlaceFields.fsq_id.rawValue),\(PlaceFields.categories.rawValue),\(PlaceFields.name.rawValue),\(PlaceFields.geocodes.rawValue),\(PlaceFields.location.rawValue),\(PlaceFields.timezone.rawValue),\(PlaceFields.distance.rawValue),\(PlaceFields.photos.rawValue)"
             return ["ll":"\(lattitude),\(longitude)","limit": 10,"radius": radius, "cursor": cursor, "sort": "DISTANCE","fields": fields]
+        case .getPlaceDetails(_):
+            let fields: String =
+            "\(PlaceFields.fsq_id.rawValue),\(PlaceFields.photos.rawValue),\(PlaceFields.hours.rawValue),\(PlaceFields.social_media.rawValue)"
+            return ["fields":fields]
         }
     }
 }
@@ -47,7 +56,7 @@ extension PlacesAPIs {
 extension PlacesAPIs {
     var method: HTTPMethod {
         switch self {
-        case .getPlaces:
+        case .getPlaces,.getPlaceDetails:
             return .get
         }
     }
@@ -56,7 +65,7 @@ extension PlacesAPIs {
 extension PlacesAPIs {
     var headers: HTTPHeaders {
         switch self {
-        case .getPlaces:
+        case .getPlaces,.getPlaceDetails:
             return ["Authorization": "\(Keys.foursquare)"]
         }
     }

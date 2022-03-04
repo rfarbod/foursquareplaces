@@ -45,7 +45,7 @@ struct PlaceView: View {
 
                 Spacer()
                 
-                Text(place.name)
+                Text(place.name ?? "")
                     .foregroundColor(colorScheme == .dark ? .white : .black)
                     .multilineTextAlignment(.trailing)
                     .padding(.trailing, 10)

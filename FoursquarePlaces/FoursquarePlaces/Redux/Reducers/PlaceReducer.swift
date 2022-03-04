@@ -23,6 +23,17 @@ func placesStateReducer(state: PlacesState, action: Action) -> PlacesState {
         state.currentRadiusState = action.radius
     case let action as PlacesActions.SetNextPageCursor:
         state.nextPageCursorState = action.nextPageCursor
+    case let action as PlacesActions.SelectPlace:
+        state.selectedPlace = action.place
+    case let action as PlacesActions.SetPlaceDetail:
+        if let placeIndex = store.state.placesState.places.firstIndex(where: { place in
+            return place.id == action.id
+        }){
+            if store.state.placesState.places.indices.contains(placeIndex) {
+                store.state.placesState.places[placeIndex].hours = action.hours
+                store.state.placesState.places[placeIndex].social_media = action.socialMedia
+            }
+        }
     default:
         break
     }

@@ -9,8 +9,8 @@ import Foundation
 
 struct SocialMedia: Codable {
     
-    let instagram: String
-    let twitter: String
+    let instagram: String?
+    let twitter: String?
 }
 
 extension SocialMedia: Persistable {
@@ -20,8 +20,8 @@ extension SocialMedia: Persistable {
     }
         public func managedObject() -> RSocialMedia {
             let socialMedia = RSocialMedia()
-            socialMedia.twitter = twitter
-            socialMedia.instagram = instagram
+            socialMedia.twitter = twitter ?? ""
+            socialMedia.instagram = instagram ?? ""
             return socialMedia
         }
 }

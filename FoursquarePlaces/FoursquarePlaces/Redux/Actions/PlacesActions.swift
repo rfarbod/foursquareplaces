@@ -40,7 +40,6 @@ struct PlacesActions {
                     }
                     
                     if actionPlaces.isEmpty {
-                        print(actionPlaces.count)
                         dispatch(SetNewRadius(radius: store.state.placesState.currentRadiusState + 1000))
                         dispatch(SetNextPageCursor(nextPageCursor: cursor))
                         dispatch(GetPlaces())
@@ -55,10 +54,38 @@ struct PlacesActions {
         }
     }
 
-    struct GetPlacesPhotoUrl: Action {
+    struct GetPlaceDetails: AsyncAction {
+        
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
+            let urlRequest = Endpoints.getPlaceDetails(store.state.placesState.selectedPlace.id).resolve()
+        
+            
+            NetworkService.default.execute(urlRequest, model: Place.self) { result, cursor in
+                switch result {
+                case let .success(place):
+                    guard let hours = place.hours else{return}
+                    guard let social_media = place.social_media else{return}
+                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id , hours: hours, socialMedia: social_media))
+                case let .failure(error):
+                    print(error)
+                }
+            }
+        }
+        
         
     }
 
+    struct SetPlaceDetail:Action {
+        let id : String
+        let hours: Hours
+        let socialMedia: SocialMedia
+    }
+    
+    struct SelectPlace: Action {
+        let place: Place
+    }
+    
     struct SetPlaces: Action {
         let response: PlacesResult
         let nextPageCursor: String

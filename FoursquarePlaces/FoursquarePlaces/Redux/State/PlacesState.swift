@@ -11,6 +11,7 @@ import SwiftUIFlux
 struct PlacesState: FluxState {
     
     var places = [Place]()
+    var selectedPlace : Place = Place(id: "")
     var nextPageCursorState: String = ""
     var currentRadiusState = 1000
 }

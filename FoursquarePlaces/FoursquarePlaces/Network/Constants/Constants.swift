@@ -10,6 +10,7 @@ import Foundation
 enum Path {
     enum Places {
         public static let getPlaces = "places/search"
+        public static let getPlaceDetails = "places/"
     }
     
     enum Photos {

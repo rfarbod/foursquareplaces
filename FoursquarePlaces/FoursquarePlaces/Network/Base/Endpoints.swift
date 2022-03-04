@@ -9,6 +9,7 @@ import Foundation
 
 public enum Endpoints {
     case getPlaces(Double,Double,String = "",Int)
+    case getPlaceDetails(String)
 }
 
 public extension Endpoints {
@@ -17,6 +18,8 @@ public extension Endpoints {
         switch self {
         case .getPlaces(let lat, let long, let cursor, let radius):
             return PlacesAPIs.getPlaces(lat, long,cursor,radius)
+        case .getPlaceDetails(let fsqId):
+            return PlacesAPIs.getPlaceDetails(fsqId)
         }
     }
 }

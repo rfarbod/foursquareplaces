@@ -15,11 +15,11 @@ struct Place: Codable,Identifiable,Equatable {
     
     var id : String
     var categories : [Categories]?
-    var distance : Double
-    var geocodes : Geocode
-    var location : Location
-    var name : String
-    var timezone : String
+    var distance : Double?
+    var geocodes : Geocode?
+    var location : Location?
+    var name : String?
+    var timezone : String?
     var hours: Hours?
     var photos: [Photo]?
     var social_media: SocialMedia? = nil
@@ -71,15 +71,18 @@ extension Place: Persistable {
     public func managedObject() -> RPlace {
         let place = RPlace()
         place.id = id
-        place.categories = [RCategories]()
-        place.distance = distance
-        place.geocodes = geocodes.managedObject()
-        place.location = location.managedObject()
-        place.name = name
-        place.timezone = timezone
+        place.distance = distance ?? 0
+        place.name = name ?? ""
+        place.timezone = timezone ?? ""
         place.hours = hours?.managedObject()
         place.social_media = social_media?.managedObject()
         place.verified = verified ?? false
+        if let geocodes = geocodes {
+            place.geocodes = geocodes.managedObject()
+        }
+        if let location = location {
+            place.location = location.managedObject()
+        }
         if let categories = categories {
             for each in categories {
                 if place.categories == nil {
