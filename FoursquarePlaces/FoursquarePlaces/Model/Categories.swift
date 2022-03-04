@@ -7,10 +7,28 @@
 
 import Foundation
 
-class Categories: Codable {
+struct Categories: Codable {
     
     let id : Int
     let name : String
     let icon : Icon
     
 }
+
+extension Categories: Persistable {
+    public init(managedObject: RCategories) {
+        id = managedObject.id
+        name = managedObject.name
+        icon = Icon(managedObject: managedObject.icon)
+    }
+    public func managedObject() -> RCategories {
+        let category = RCategories()
+        category.id = id
+        category.name = name
+        category.icon = icon.managedObject()
+        return category
+    }
+    
+    
+}
+

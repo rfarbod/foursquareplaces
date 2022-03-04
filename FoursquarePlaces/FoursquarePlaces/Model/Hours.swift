@@ -14,4 +14,21 @@ struct Hours: Codable {
     let open_now: Bool
     
 }
+
+extension Hours: Persistable {
+
+    public init(managedObject: RHours) {
+        display = managedObject.display
+        is_local_holiday = managedObject.is_local_holiday
+        open_now = managedObject.open_now
+    }
+        public func managedObject() -> RHours {
+            let hours = RHours()
+            hours.display = display
+            hours.open_now = open_now
+            hours.is_local_holiday = is_local_holiday
+            return hours
+        }
+
+}
             

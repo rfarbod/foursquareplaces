@@ -16,3 +16,24 @@ struct Photo: Codable {
     let height: Double
     let classifications: [String]?
 }
+
+extension Photo: Persistable {
+    public init(managedObject: RPhoto) {
+        created_at = managedObject.created_at
+        prefix = managedObject.prefix
+        suffix = managedObject.suffix
+        width = managedObject.width
+        height = managedObject.height
+        classifications = managedObject.classifications
+    }
+        public func managedObject() -> RPhoto {
+            let photo = RPhoto()
+            photo.created_at = created_at
+            photo.prefix = prefix
+            photo.suffix = suffix
+            photo.width = width
+            photo.height = height
+            photo.classifications = classifications 
+            return photo
+        }
+}

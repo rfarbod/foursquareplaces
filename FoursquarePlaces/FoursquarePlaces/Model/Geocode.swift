@@ -20,3 +20,27 @@ struct MainGeocode: Codable {
     let longitude : Double
 
 }
+
+extension MainGeocode: Persistable{
+    public init(managedObject: RMainGeocode) {
+        latitude = managedObject.lattitud
+        longitude = managedObject.longitude
+    }
+    public func managedObject() -> RMainGeocode {
+        let main = RMainGeocode()
+        main.lattitud = latitude
+        main.longitude = longitude
+        return main
+    }
+}
+extension Geocode: Persistable {
+    
+    public init(managedObject: RGeocode) {
+        main = MainGeocode(managedObject: managedObject.main)
+    }
+    public func managedObject() -> RGeocode {
+       let geocode = RGeocode()
+        geocode.main = main.managedObject()
+        return geocode
+    }
+}
