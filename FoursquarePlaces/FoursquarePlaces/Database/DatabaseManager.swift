@@ -13,6 +13,7 @@ public protocol DatabaseServiceProtocol: AnyObject {
     func addToDatabase <T:Realmable> (_ value: T)
     func addBatchItemsToDatabase <T:Realmable> (_ values: [T])
     func fetchItems<T:Realmable> (_ type: T.Type) -> [T]
+    func removeAll()
     
 }
 public extension DatabaseServiceProtocol {
@@ -40,6 +41,13 @@ public extension DatabaseServiceProtocol {
          let realm = try! Realm()
          let results = Array(realm.objects(T.self))
          return results
+    }
+    
+    func removeAll(){
+        let realm = try! Realm()
+        try! realm.write({
+            realm.deleteAll()
+        })
     }
     
     

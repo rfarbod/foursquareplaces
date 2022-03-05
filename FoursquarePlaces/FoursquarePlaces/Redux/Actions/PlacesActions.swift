@@ -28,6 +28,7 @@ struct PlacesActions {
             NetworkService.default.execute(urlReuqest, model: PlacesResult.self) { result,cursor  in
                 switch result {
                 case let .success(response):
+                    store.state.isOfflineState = false
                     var actionPlaces = response.results
                     
                     for each in actionPlaces {
@@ -51,6 +52,7 @@ struct PlacesActions {
                     }
                 case let .failure(error):
                     print(error)
+                    store.state.isOfflineState = true
                     let places = DatabaseService.default.fetchItems(Place.self)
                     store.dispatch(action: PlacesActions.SetPlacesFromDatabase(places: places))
                 }

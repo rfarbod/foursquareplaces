@@ -14,6 +14,7 @@ func locationReducer(state: UserLocationState, action: Action) -> UserLocationSt
     case let action as LocationActions.SetLocation:
         state.userLat = action.userLat
         state.userLong = action.userLong
+        UserDefaults.standard.setLocation(latitude: action.userLat, long: action.userLong)
     default:
         break
     }

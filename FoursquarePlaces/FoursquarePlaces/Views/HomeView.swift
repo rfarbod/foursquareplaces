@@ -42,7 +42,7 @@ struct HomeView: View {
                                 PlaceView(place: place)
                                     .onAppear {
                                         //getting ready to fetch new places when user is close to the bottom of the list
-                                        if place == self.places.last {
+                                        if place == self.places.last && store.state.isOfflineState == false{
                                             store.dispatch(action: PlacesActions.GetPlaces())
                                         }
                                     }

@@ -32,19 +32,19 @@ final class LocationManager: NSObject {
     func stop(){
         locationManager.stopMonitoringSignificantLocationChanges()
     }
-   
+    
     
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-         
+        
         if manager.authorizationStatus == .authorizedWhenInUse ||
             manager.authorizationStatus == .authorizedAlways {
             
             locationManager.startUpdatingLocation()
-        
+            
         }
     }
     
@@ -54,11 +54,18 @@ extension LocationManager: CLLocationManagerDelegate {
         let long = Double(locValue.longitude)
         // calculating user's location distance from the previous state location
         let coordinate = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
-        let previousCoordinate = CLLocation(latitude: CLLocationDegrees(store.state.locationState.userLat), longitude: CLLocationDegrees(store.state.locationState.userLong))
+        var previousCoordinate = CLLocation()
+        if store.state.locationState.userLat != 0 && store.state.locationState.userLong != 0 {
+            previousCoordinate = CLLocation(latitude: CLLocationDegrees(store.state.locationState.userLat), longitude: CLLocationDegrees(store.state.locationState.userLong))
+        }else{
+            let (lat,long) = UserDefaults.standard.getLocation()
+            previousCoordinate = CLLocation(latitude: lat, longitude: long)
+        }
         let distance = coordinate.distance(from: previousCoordinate)
         if store.state.locationState.userLat != 0{
             if distance >= 100 {
-        store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))
+                DatabaseService.default.removeAll()
+                store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))
             }
         }else{
             store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))

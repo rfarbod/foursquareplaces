@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 import SwiftUIFlux
 
 struct PlaceDetailView: View {
-    private let imageHeight: CGFloat = 200
+    private let imageHeight: CGFloat = 300
     private let collapsedImageHeight: CGFloat = 75
     
     @EnvironmentObject var store : Store<AppState>
@@ -90,7 +90,7 @@ struct PlaceDetailView: View {
                                 TipView(tipText: tips[index - 1].text ?? "")
                             }
                         }
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 50)
                     }
                 }
                 

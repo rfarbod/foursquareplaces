@@ -9,7 +9,7 @@ import Foundation
 import SwiftUIFlux
 
 struct AppState: FluxState {
-    
+    var isOfflineState = Bool()
     var placesState = PlacesState()
     var locationState = UserLocationState()
     
