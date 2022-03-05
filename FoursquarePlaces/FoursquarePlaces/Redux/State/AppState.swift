@@ -12,4 +12,5 @@ struct AppState: FluxState {
     
     var placesState = PlacesState()
     var locationState = UserLocationState()
+    
 }

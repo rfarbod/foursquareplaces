@@ -77,22 +77,22 @@ struct PlaceDetailView: View {
                     openMap()
                 }
                 
-                
-                HStack{
-                    Text("Tips")
-                        .font(Font.custom("Vazir-Medium", size: 15))
-                        .padding(15)
-                    Spacer()
-                }
-                
-                VStack(spacing: 15){
-                    if let tips = place.tips {
-                        ForEach(0..<tips.count - 1) { index in
-                            TipView(tipText: tips[index].text ?? "")
+                if let tips = place.tips{
+                    if tips.count > 0 {
+                        HStack{
+                            Text("Tips")
+                                .font(Font.custom("Vazir-Medium", size: 15))
+                                .padding(15)
+                            Spacer()
                         }
+                        VStack(spacing: 15){
+                            ForEach(1 ... tips.count, id: \.self){ index in
+                                TipView(tipText: tips[index - 1].text ?? "")
+                            }
+                        }
+                        .padding(.bottom, 20)
                     }
                 }
-                .padding(.horizontal, 5)
                 
             }.edgesIgnoringSafeArea(.all)
                 .onAppear {

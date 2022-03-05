@@ -11,6 +11,7 @@ import SwiftUIFlux
 struct HomeView: View {
     
     @EnvironmentObject var store : Store<AppState>
+    @State var navigate = false
     
     var places: [Place] {
         return store.state.placesState.places
@@ -31,7 +32,13 @@ struct HomeView: View {
                 if !places.isEmpty {
                     List {
                         ForEach(places) { place in
-                            NavigationLink(destination: getDetailView(place: place)){
+                            ZStack{
+                                
+                                NavigationLink(destination: PlaceDetailView(), isActive: $navigate) {
+                                    EmptyView()
+                                }
+                                .hidden()
+                                
                                 PlaceView(place: place)
                                     .onAppear {
                                         //getting ready to fetch new places when user is close to the bottom of the list
@@ -39,35 +46,29 @@ struct HomeView: View {
                                             store.dispatch(action: PlacesActions.GetPlaces())
                                         }
                                     }
+                                    .onTapGesture {
+                                        store.dispatch(action: PlacesActions.SelectPlace(place: place))
+                                        navigate = true
+                                    }
                                     .background(.clear)
                             }
                         }
                     }
                     .background(.clear)
-                    .animation(.default,value: places.count)
+                    .animation(.default, value: places.count)
                     .listRowSeparator(.hidden)
-                    
                 }
             }
             .navigationTitle("Nearby Places")
         }
         .onChange(of: userLat, perform: { newValue in
             store.dispatch(action: PlacesActions.GetPlaces())
-            
         })
         .onAppear {
             if userLat.isZero {
                 LocationManager.shared.start()
             }
-            
         }
-        
-    }
-    
-    
-    func getDetailView(place: Place) -> some View{
-//        store.dispatch(action: PlacesActions.SelectPlace(place: place))
-        return PlaceDetailView()
     }
 }
 
