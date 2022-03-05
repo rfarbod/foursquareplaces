@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUIFlux
+import SwiftUI
 
 struct PlacesActions {
     
@@ -71,7 +72,25 @@ struct PlacesActions {
                 case let .success(place):
                     guard let hours = place.hours else{return}
                     guard let social_media = place.social_media else{return}
-                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id  , hours: hours, socialMedia: social_media))
+                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id  , hours: hours, socialMedia: social_media, price: place.price ?? 1))
+                case let .failure(error):
+                    print(error)
+                }
+            }
+        }
+        
+        
+    }
+    
+    struct GetPlaceTips:AsyncAction {
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let id = store.state.placesState.selectedPlace.id
+            let urlRequest = Endpoints.getPlaceTips(id).resolve()
+            
+            NetworkService.default.execute(urlRequest, model: [Tips].self) { result, cursor in
+                switch result {
+                case let .success(tips):
+                    store.dispatch(action: PlacesActions.SetPlaceTips(id: id, tips: tips))
                 case let .failure(error):
                     print(error)
                 }
@@ -81,10 +100,15 @@ struct PlacesActions {
         
     }
 
+    struct SetPlaceTips: Action {
+        let id: String
+        let tips: [Tips]
+    }
     struct SetPlaceDetail:Action {
         let id : String
         let hours: Hours
         let socialMedia: SocialMedia
+        let price: Int
     }
     
     struct SelectPlace: Action {

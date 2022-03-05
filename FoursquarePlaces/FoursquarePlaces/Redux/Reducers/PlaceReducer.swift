@@ -41,9 +41,26 @@ func placesStateReducer(state: PlacesState, action: Action) -> PlacesState {
         if let placeIndex = store.state.placesState.places.firstIndex(where: { place in
             return place.id == action.id
         }){
-            if store.state.placesState.places.indices.contains(placeIndex) {
-                store.state.placesState.places[placeIndex].hours = action.hours
-                store.state.placesState.places[placeIndex].social_media = action.socialMedia
+            if state.places.indices.contains(placeIndex) {
+                state.places[placeIndex].hours = action.hours
+                state.places[placeIndex].social_media = action.socialMedia
+                state.places[placeIndex].price = action.price
+            }
+            if state.selectedPlace.id == action.id {
+                state.selectedPlace.hours = action.hours
+                state.selectedPlace.social_media = action.socialMedia
+                state.selectedPlace.price = action.price
+            }
+        }
+    case let action as PlacesActions.SetPlaceTips:
+        if let placeIndex = store.state.placesState.places.firstIndex(where: { place in
+            return place.id == action.id
+        }){
+            if state.places.indices.contains(placeIndex) {
+                state.places[placeIndex].tips = action.tips
+            }
+            if state.selectedPlace.id == action.id {
+                state.selectedPlace.tips = action.tips 
             }
         }
     default:

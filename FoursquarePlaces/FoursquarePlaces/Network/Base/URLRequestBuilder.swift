@@ -45,7 +45,7 @@ extension URLRequestBuilder {
     
     var urlRequest: URLRequest {
         var request = URLRequest(url: requestURL)
-        request.timeoutInterval = 1
+        request.timeoutInterval = 3
         request.httpMethod = method.rawValue
         headers.forEach {
             request.addValue($0.value, forHTTPHeaderField: $0.name)

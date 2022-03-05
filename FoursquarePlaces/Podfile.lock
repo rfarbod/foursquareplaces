@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (5.5.0)
-  - ReachabilitySwift (5.0.0)
   - Realm (10.22.0):
     - Realm/Headers (= 10.22.0)
   - Realm/Headers (10.22.0)
@@ -19,14 +18,12 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - ReachabilitySwift
   - SDWebImageSwiftUI
   - Unrealm
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - ReachabilitySwift
     - Realm
     - RealmSwift
     - Runtime
@@ -36,7 +33,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: d9e4e5877095a6722145811f56fe89a531c9659d
   RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
   Runtime: 67741bd196fb4ad821c4d259ccc527bf734d8806
@@ -44,6 +40,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   Unrealm: 547a3e1432a86df5cff7b74927a60cc664cc2a0d
 
-PODFILE CHECKSUM: e4e25b9904a9523241f1931b96335f64ab671bfe
+PODFILE CHECKSUM: 96a1cb52532678a6f613fdf90c9d6f24294ea8d9
 
 COCOAPODS: 1.10.2

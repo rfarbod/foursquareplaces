@@ -20,6 +20,7 @@ class MyAppDelagate: UIResponder, UIApplicationDelegate {
                                    Location.self,
                                    Photo.self,
                                    SocialMedia.self,
+                                   Tips.self
                                   ])
         return true
     }

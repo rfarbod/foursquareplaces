@@ -27,6 +27,9 @@ struct StatusView: View{
 
     let openNow = "Open Now!"
     let closed = "Closed!"
+    
+    let red = Color("Red")
+    let green = Color("Green")
 
     var body: some View {
 
@@ -34,11 +37,11 @@ struct StatusView: View{
             Rectangle()
                 .frame(width: 10, height: 10)
                 .cornerRadius(5)
-                .foregroundColor( status.isOpen ? .green : .red )
+                .foregroundColor( status.isOpen ? green : red )
 
             Text(status.isOpen ? openNow : closed)
-                .font(.avenirNext(size: 15))
-                .foregroundColor( status.isOpen ? .green : .red )
+                .font(Font.custom("Vazir-Medium", size: 17))
+                .foregroundColor( status.isOpen ? green : red )
         }
         .padding([.bottom, .trailing], 20)
         .padding([.top, .leading], 5)

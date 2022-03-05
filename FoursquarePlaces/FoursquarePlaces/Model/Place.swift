@@ -24,6 +24,8 @@ struct Place: Codable,Identifiable,Equatable,Realmable {
     var photos: [Photo]?
     var social_media: SocialMedia? = nil
     var verified: Bool?
+    var price: Int?
+    var tips: [Tips]?
     
     private enum CodingKeys : String, CodingKey {
            case id = "fsq_id"
@@ -36,6 +38,7 @@ struct Place: Codable,Identifiable,Equatable,Realmable {
            case photos
            case social_media
            case verified
+           case price
        }
     
     static func == (lhs: Place, rhs: Place) -> Bool {

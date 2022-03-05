@@ -31,49 +31,44 @@ struct HomeView: View {
                 if !places.isEmpty {
                     List {
                         ForEach(places) { place in
-                            HStack {
-                            PlaceView(place: place)
-                                .onAppear {
-                                    //getting ready to fetch new places when user is close to the bottom of the list
-                                    if place == self.places.last {
-                                        store.dispatch(action: PlacesActions.GetPlaces())
+                            NavigationLink(destination: getDetailView(place: place)){
+                                PlaceView(place: place)
+                                    .onAppear {
+                                        //getting ready to fetch new places when user is close to the bottom of the list
+                                        if place == self.places.last {
+                                            store.dispatch(action: PlacesActions.GetPlaces())
+                                        }
                                     }
-                                }
-                                .onTapGesture {
-                                    store.dispatch(action: PlacesActions.SelectPlace(place: place))
-                                    store.dispatch(action: PlacesActions.GetPlaceDetails())
-                                }
-                                .background(.clear)
-                            NavigationLink("", destination: PlaceDetailView(place: place, tips: [1,3,4,5,6]))
-                                    .frame(width: 50, height: 80)
+                                    .background(.clear)
                             }
-                        .background(.clear)
-                        .padding([.leading, .trailing], 10)
-                        .listRowSeparator(.hidden)
-                       
-                        
-                    }
+                        }
                     }
                     .background(.clear)
                     .animation(.default,value: places.count)
                     .listRowSeparator(.hidden)
-
+                    
                 }
             }
             .navigationTitle("Nearby Places")
         }
         .onChange(of: userLat, perform: { newValue in
-                store.dispatch(action: PlacesActions.GetPlaces())
-           
+            store.dispatch(action: PlacesActions.GetPlaces())
+            
         })
         .onAppear {
             if userLat.isZero {
                 LocationManager.shared.start()
             }
+            
+        }
         
     }
     
-}
+    
+    func getDetailView(place: Place) -> some View{
+//        store.dispatch(action: PlacesActions.SelectPlace(place: place))
+        return PlaceDetailView()
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

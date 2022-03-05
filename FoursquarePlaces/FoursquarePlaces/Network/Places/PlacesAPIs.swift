@@ -19,11 +19,13 @@ enum PlaceFields: String {
     case photos   = "photos"
     case hours = "hours"
     case social_media = "social_media"
+    case price = "price"
 }
 enum PlacesAPIs: URLRequestBuilder {
     
     case getPlaces(Double,Double,String = "",Int)
     case getPlaceDetails(String)
+    case getPlaceTips(String)
     
 }
 
@@ -34,6 +36,8 @@ extension PlacesAPIs {
             return Path.Places.getPlaces
         case .getPlaceDetails(let fsqId):
             return "\(Path.Places.getPlaceDetails)\(fsqId)"
+        case .getPlaceTips(let fsqId):
+            return Path.Places.getPlaceTips(fsqId: fsqId)
         }
     }
 }
@@ -47,8 +51,10 @@ extension PlacesAPIs {
             return ["ll":"\(lattitude),\(longitude)","limit": 10,"radius": radius, "cursor": cursor, "sort": "DISTANCE","fields": fields]
         case .getPlaceDetails(_):
             let fields: String =
-            "\(PlaceFields.fsq_id.rawValue),\(PlaceFields.photos.rawValue),\(PlaceFields.hours.rawValue),\(PlaceFields.social_media.rawValue)"
+            "\(PlaceFields.fsq_id.rawValue),\(PlaceFields.hours.rawValue),\(PlaceFields.social_media.rawValue),\(PlaceFields.price.rawValue)"
             return ["fields":fields]
+        case .getPlaceTips(_):
+            return nil
         }
     }
 }
@@ -56,7 +62,7 @@ extension PlacesAPIs {
 extension PlacesAPIs {
     var method: HTTPMethod {
         switch self {
-        case .getPlaces,.getPlaceDetails:
+        case .getPlaces,.getPlaceDetails,.getPlaceTips:
             return .get
         }
     }
@@ -65,7 +71,7 @@ extension PlacesAPIs {
 extension PlacesAPIs {
     var headers: HTTPHeaders {
         switch self {
-        case .getPlaces,.getPlaceDetails:
+        case .getPlaces,.getPlaceDetails,.getPlaceTips:
             return ["Authorization": "\(Keys.foursquare)"]
         }
     }

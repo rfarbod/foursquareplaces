@@ -11,7 +11,7 @@ struct PriceClass: View{
 
     var `class`: Int
     let highestClass = 4
-    let singleClassSize: CGFloat = 10
+    let singleClassSize: CGFloat = 15
 
     let offImage = Image(systemName: "dollarsign.circle")
     let onImage = Image(systemName: "dollarsign.circle.fill")

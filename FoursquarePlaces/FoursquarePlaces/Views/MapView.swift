@@ -45,7 +45,4 @@ struct MapView: View{
 
         }
     }
-
-
 }
-

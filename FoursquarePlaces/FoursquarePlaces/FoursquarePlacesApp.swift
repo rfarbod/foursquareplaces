@@ -19,6 +19,7 @@ struct FoursquarePlacesApp: App {
             StoreProvider(store: store, content: {
                 HomeView()
             })
+            
         }
     }
 }
