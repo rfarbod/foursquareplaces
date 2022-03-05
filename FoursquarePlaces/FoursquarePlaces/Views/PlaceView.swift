@@ -53,6 +53,7 @@ struct PlaceView: View {
                     .padding(.trailing, 10)
                     .font(Font.custom("Vazir-Medium", size: 14))
                     .background(.clear)
+                
             }
             .background(colorScheme == .dark ? Color(uiColor: .systemGray3) : Color(uiColor: .systemGray6))
             .cornerRadius(15)

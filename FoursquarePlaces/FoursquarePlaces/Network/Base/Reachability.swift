@@ -1,42 +1,87 @@
 //
-//  Reachability.swift
+//  NetworkReachabilityManager.swift
 //  FoursquarePlaces
 //
 //  Created by Farbod Rahiminik on 3/5/22.
 //
 
 import Foundation
-import Network
+import Reachability
 
-class NetworkReachability {
-   static var shared = NetworkReachability()
-   private var pathMonitor: NWPathMonitor!
-   private var path: NWPath?
-   private lazy var pathUpdateHandler: ((NWPath) -> Void) = { path in
-    self.path = path
-    if path.status == NWPath.Status.satisfied {
-        print("Connected")
-    } else if path.status == NWPath.Status.unsatisfied {
-        print("unsatisfied")
-    } else if path.status == NWPath.Status.requiresConnection {
-        print("requiresConnection")
+class NetworkReachabilityManager: NSObject {
+    var reachability: Reachability!
+    static let sharedInstance: NetworkReachabilityManager = {
+        return NetworkReachabilityManager()
+    }()
+    override init() {
+        super.init()
+        reachability = try! Reachability()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(networkStatusChanged(_:)),
+            name: .reachabilityChanged,
+            object: reachability
+        )
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    @objc func networkStatusChanged(_ notification: Notification) {
+    }
+    static func stopNotifier() -> Void {
+        do {
+            try (NetworkReachabilityManager.sharedInstance.reachability).startNotifier()
+        } catch {
+            print("Error stopping notifier")
+        }
+    }
+
+    static func isReachable(completed: @escaping (NetworkReachabilityManager) -> Void) {
+        if (NetworkReachabilityManager.sharedInstance.reachability).connection != .unavailable {
+            completed(NetworkReachabilityManager.sharedInstance)
+        }
+    }
+    static func isUnreachable(completed: @escaping (NetworkReachabilityManager) -> Void) {
+        if (NetworkReachabilityManager.sharedInstance.reachability).connection == .unavailable {
+            completed(NetworkReachabilityManager.sharedInstance)
+        }
+    }
+    static func isReachableViaWWAN(completed: @escaping (NetworkReachabilityManager) -> Void) {
+        if (NetworkReachabilityManager.sharedInstance.reachability).connection == .cellular {
+            completed(NetworkReachabilityManager.sharedInstance)
+        }
+    }
+    static func isReachableViaWiFi(completed: @escaping (NetworkReachabilityManager) -> Void) {
+        if (NetworkReachabilityManager.sharedInstance.reachability).connection == .wifi {
+            completed(NetworkReachabilityManager.sharedInstance)
+        }
     }
 }
 
-let backgroudQueue = DispatchQueue.global(qos: .background)
 
-init() {
-    pathMonitor = NWPathMonitor()
-    pathMonitor.pathUpdateHandler = self.pathUpdateHandler
-    pathMonitor.start(queue: backgroudQueue)
-   }
+class ConnectionManager {
 
- func isNetworkAvailable() -> Bool {
-        if let path = self.path {
-           if path.status == NWPath.Status.satisfied {
-            return true
-          }
+    static let shared = ConnectionManager()
+    private init () {}
+
+    func hasConnectivity() -> Bool {
+        do {
+            let reachability: Reachability = try Reachability()
+            let networkStatus = reachability.connection
+            
+            switch networkStatus {
+            case .unavailable:
+                return false
+            case .wifi, .cellular:
+                return true
+            default:
+                return false
+            }
         }
-       return false
-   }
- }
+        catch {
+            return false
+        }
+    }
+}

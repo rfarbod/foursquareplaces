@@ -7,6 +7,8 @@
 
 import Foundation
 import Alamofire
+import Reachability
+import Network
 
 public protocol NetworkServiceProtocol: AnyObject {
     
@@ -14,7 +16,7 @@ public protocol NetworkServiceProtocol: AnyObject {
                              model: T.Type,
                              completion: @escaping (Result<T,AFError>,String) -> Void)
     
-    var isReachable: Bool {get}
+    func isReachable() -> Bool
 }
 
 public extension NetworkServiceProtocol {
@@ -43,15 +45,15 @@ public extension NetworkServiceProtocol {
         }
     }
     
-    var isReachable: Bool {
-        get {NetworkReachability.shared.isNetworkAvailable()}
+    func isReachable() -> Bool {
+        return ConnectionManager.shared.hasConnectivity()
     }
+   
+    
     
 }
 
 public class NetworkService: NetworkServiceProtocol {
-    
-   
     
     public static let `default`: NetworkServiceProtocol = {
         var service = NetworkService()

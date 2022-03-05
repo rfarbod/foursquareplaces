@@ -9,6 +9,7 @@ target 'FoursquarePlaces' do
   pod 'Alamofire' 
   pod 'SDWebImageSwiftUI'
   pod 'Unrealm'
+  pod 'ReachabilitySwift'
   
   target 'FoursquarePlacesTests' do
     inherit! :search_paths

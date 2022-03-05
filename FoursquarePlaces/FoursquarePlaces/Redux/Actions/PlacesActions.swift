@@ -13,7 +13,6 @@ struct PlacesActions {
     struct GetPlaces: AsyncAction {
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
-            if NetworkService.default.isReachable {
             var urlReuqest:URLRequestBuilder
             guard let state = state as? AppState else {
                 return
@@ -51,11 +50,9 @@ struct PlacesActions {
                     }
                 case let .failure(error):
                     print(error)
+                    let places = DatabaseService.default.fetchItems(Place.self)
+                    store.dispatch(action: PlacesActions.SetPlacesFromDatabase(places: places))
                 }
-            }
-            }else{
-                let places = DatabaseService.default.fetchItems(Place.self)
-                store.dispatch(action: PlacesActions.SetPlacesFromDatabase(places: places))
             }
         }
     }
