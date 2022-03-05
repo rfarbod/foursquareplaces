@@ -37,8 +37,9 @@ class FoursquarePlacesTests: XCTestCase {
     }
     
     func testOnPlacesApiSuccess() {
-        let item = Place(id: "123", categories: [Categories()], distance: 243, geocodes: Geocode(), location: Location(), name: "Somewhere", timezone: "Asia/Tehran")
-        mockAction = PlacesActions.SetPlaces(response: PlacesResult(results: [item]))
+        var item = Place()
+        item.id = "123"
+        mockAction = PlacesActions.SetPlaces(response: [item], nextPageCursor: "")
         store.dispatch(action: mockAction)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             XCTAssertEqual(self.sut.state.placesState.places[0].id, item.id)
