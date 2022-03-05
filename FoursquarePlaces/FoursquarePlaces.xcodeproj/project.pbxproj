@@ -48,16 +48,8 @@
 		1377858B27D162B200C3410E /* LocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377858A27D162B200C3410E /* LocationState.swift */; };
 		1377858D27D1633900C3410E /* LocationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377858C27D1633900C3410E /* LocationReducer.swift */; };
 		1377858F27D163A400C3410E /* LocationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377858E27D163A400C3410E /* LocationActions.swift */; };
-		1377859327D1808400C3410E /* RPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859227D1808400C3410E /* RPlace.swift */; };
-		1377859527D1819800C3410E /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859427D1819800C3410E /* Persistable.swift */; };
 		1377859727D183F200C3410E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859627D183F200C3410E /* DatabaseManager.swift */; };
-		1377859927D185C900C3410E /* RCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859827D185C900C3410E /* RCategories.swift */; };
-		1377859B27D1EB6700C3410E /* RIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859A27D1EB6700C3410E /* RIcon.swift */; };
-		1377859D27D2042D00C3410E /* RGeocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859C27D2042D00C3410E /* RGeocode.swift */; };
-		1377859F27D2063900C3410E /* RLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377859E27D2063900C3410E /* RLocation.swift */; };
-		137785A127D208C300C3410E /* RHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137785A027D208C300C3410E /* RHours.swift */; };
-		137785A327D20A5300C3410E /* RPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137785A227D20A5300C3410E /* RPhoto.swift */; };
-		137785A527D20E9D00C3410E /* RSocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137785A427D20E9D00C3410E /* RSocialMedia.swift */; };
+		13C48C8B27D2F6C3002B83E5 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C48C8A27D2F6C3002B83E5 /* MyAppDelegate.swift */; };
 		1593BDBFCBE0B8E6AA17F4CC /* Pods_FoursquarePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D04254CB343B43ED45F7B86 /* Pods_FoursquarePlaces.framework */; };
 		617454122541BBF2617A6D07 /* Pods_FoursquarePlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76A034F40E22BC06E2E4899 /* Pods_FoursquarePlacesTests.framework */; };
 		8E03F01EC0195D0B9A5FF5B4 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1041D92FD0F980BC57C21D26 /* Pods_FoursquarePlaces_FoursquarePlacesUITests.framework */; };
@@ -126,16 +118,8 @@
 		1377858A27D162B200C3410E /* LocationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationState.swift; sourceTree = "<group>"; };
 		1377858C27D1633900C3410E /* LocationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationReducer.swift; sourceTree = "<group>"; };
 		1377858E27D163A400C3410E /* LocationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationActions.swift; sourceTree = "<group>"; };
-		1377859227D1808400C3410E /* RPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPlace.swift; sourceTree = "<group>"; };
-		1377859427D1819800C3410E /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		1377859627D183F200C3410E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		1377859827D185C900C3410E /* RCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategories.swift; sourceTree = "<group>"; };
-		1377859A27D1EB6700C3410E /* RIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIcon.swift; sourceTree = "<group>"; };
-		1377859C27D2042D00C3410E /* RGeocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGeocode.swift; sourceTree = "<group>"; };
-		1377859E27D2063900C3410E /* RLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLocation.swift; sourceTree = "<group>"; };
-		137785A027D208C300C3410E /* RHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHours.swift; sourceTree = "<group>"; };
-		137785A227D20A5300C3410E /* RPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPhoto.swift; sourceTree = "<group>"; };
-		137785A427D20E9D00C3410E /* RSocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSocialMedia.swift; sourceTree = "<group>"; };
+		13C48C8A27D2F6C3002B83E5 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		498C7BCD78D6DA055EDE1BA5 /* Pods-FoursquarePlacesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlacesTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePlacesTests/Pods-FoursquarePlacesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D04254CB343B43ED45F7B86 /* Pods_FoursquarePlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D67F9225D25F1D07A03AB6F /* Pods-FoursquarePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePlaces.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePlaces/Pods-FoursquarePlaces.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +202,7 @@
 				13561AC627CAB1B400F4E5F6 /* Model */,
 				13561AC527CAB1A500F4E5F6 /* Redux */,
 				13561A9427CAAF7000F4E5F6 /* FoursquarePlacesApp.swift */,
+				13C48C8A27D2F6C3002B83E5 /* MyAppDelegate.swift */,
 				13565E8C27CB962200FE5E01 /* Font */,
 				13561A9827CAAF7100F4E5F6 /* Assets.xcassets */,
 				13561A9A27CAAF7100F4E5F6 /* Preview Content */,
@@ -392,25 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				1377859627D183F200C3410E /* DatabaseManager.swift */,
-				1377859427D1819800C3410E /* Persistable.swift */,
-				1377859127D1806B00C3410E /* Model */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		1377859127D1806B00C3410E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1377859227D1808400C3410E /* RPlace.swift */,
-				1377859827D185C900C3410E /* RCategories.swift */,
-				1377859A27D1EB6700C3410E /* RIcon.swift */,
-				1377859C27D2042D00C3410E /* RGeocode.swift */,
-				1377859E27D2063900C3410E /* RLocation.swift */,
-				137785A027D208C300C3410E /* RHours.swift */,
-				137785A227D20A5300C3410E /* RPhoto.swift */,
-				137785A427D20E9D00C3410E /* RSocialMedia.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2864CD74626762CA25E01CBD /* Pods */ = {
@@ -699,32 +667,24 @@
 				13565E8127CB4EA000FE5E01 /* AppEnvironement.swift in Sources */,
 				13561AD427CAB4AC00F4E5F6 /* Location.swift in Sources */,
 				1377858D27D1633900C3410E /* LocationReducer.swift in Sources */,
+				13C48C8B27D2F6C3002B83E5 /* MyAppDelegate.swift in Sources */,
 				13561AE027CAC19300F4E5F6 /* Store.swift in Sources */,
-				137785A127D208C300C3410E /* RHours.swift in Sources */,
-				1377859527D1819800C3410E /* Persistable.swift in Sources */,
 				1377858927D14B6700C3410E /* LocationManager.swift in Sources */,
-				1377859927D185C900C3410E /* RCategories.swift in Sources */,
 				1377858B27D162B200C3410E /* LocationState.swift in Sources */,
 				13561A9727CAAF7000F4E5F6 /* HomeView.swift in Sources */,
-				1377859D27D2042D00C3410E /* RGeocode.swift in Sources */,
 				132E4D2027D0C92500C4B001 /* String.swift in Sources */,
-				1377859F27D2063900C3410E /* RLocation.swift in Sources */,
 				132E4D2627D0E67C00C4B001 /* SocialMedia.swift in Sources */,
 				1377858F27D163A400C3410E /* LocationActions.swift in Sources */,
 				13561A9527CAAF7000F4E5F6 /* FoursquarePlacesApp.swift in Sources */,
-				1377859327D1808400C3410E /* RPlace.swift in Sources */,
 				13565E7C27CB4D9900FE5E01 /* NetworkManager.swift in Sources */,
-				137785A527D20E9D00C3410E /* RSocialMedia.swift in Sources */,
 				13565E7E27CB4E7C00FE5E01 /* URLRequestBuilder.swift in Sources */,
 				132E4D2227D0E4FF00C4B001 /* Hours.swift in Sources */,
 				13565E8927CB567E00FE5E01 /* Endpoints.swift in Sources */,
 				13561ACC27CAB2EA00F4E5F6 /* Place.swift in Sources */,
 				13561ACE27CAB33800F4E5F6 /* Categories.swift in Sources */,
 				13565E8B27CB71D300FE5E01 /* PlaceView.swift in Sources */,
-				1377859B27D1EB6700C3410E /* RIcon.swift in Sources */,
 				13561ADA27CABE0600F4E5F6 /* PlaceReducer.swift in Sources */,
 				13565E8727CB52D400FE5E01 /* Constants.swift in Sources */,
-				137785A327D20A5300C3410E /* RPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,8 @@ target 'FoursquarePlaces' do
   # Pods for FoursquarePlaces
   pod 'Alamofire' 
   pod 'SDWebImageSwiftUI'
-  pod 'RealmSwift'
-
+  pod 'Unrealm'
+  
   target 'FoursquarePlacesTests' do
     inherit! :search_paths
     # Pods for testing

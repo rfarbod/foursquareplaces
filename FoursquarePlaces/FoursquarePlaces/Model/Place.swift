@@ -6,15 +6,15 @@
 //
 
 import Foundation
+import Unrealm
 
 struct PlacesResult: Codable {
     
     let results : [Place]
 }
-struct Place: Codable,Identifiable,Equatable {
+struct Place: Codable,Identifiable,Equatable,Realmable {
     
-    var id : String?
-    var categories : [Categories]?
+    var id : String = ""
     var distance : Double?
     var geocodes : Geocode?
     var location : Location?
@@ -27,7 +27,6 @@ struct Place: Codable,Identifiable,Equatable {
     
     private enum CodingKeys : String, CodingKey {
            case id = "fsq_id"
-           case categories
            case distance
            case geocodes
            case location
@@ -43,68 +42,10 @@ struct Place: Codable,Identifiable,Equatable {
         return lhs.id == rhs.id
     }
     
+    static func primaryKey() -> String? {
+        return "id"
+    }
+    
     
 }
 
-extension Place: Persistable {
-    public init(managedObject: RPlace) {
-        id = managedObject.id
-        distance = managedObject.distance
-        name = managedObject.name
-        timezone = managedObject.timezone
-        verified = managedObject.verified
-        if let geocode = managedObject.geocodes {
-            geocodes = Geocode(managedObject: geocode)
-        }
-        if let managedLocation = managedObject.location {
-            location = Location(managedObject: managedLocation)
-        }
-        if let socialMedia = managedObject.social_media {
-        social_media = SocialMedia(managedObject: socialMedia)
-        }
-        if let categories = managedObject.categories {
-            self.categories = categories.compactMap(Categories.init(managedObject:))
-        }
-        if let hours = managedObject.hours {
-            self.hours = Hours(managedObject: hours)
-        }
-        if let photos = managedObject.photos {
-            self.photos = photos.compactMap(Photo.init(managedObject:))
-        }
-    }
-    public func managedObject() -> RPlace {
-        let place = RPlace()
-        place.id = id
-        place.distance = distance ?? 0
-        place.name = name ?? ""
-        place.timezone = timezone ?? ""
-        place.hours = hours?.managedObject()
-        place.social_media = social_media?.managedObject()
-        place.verified = verified ?? false
-        if let geocodes = geocodes {
-            place.geocodes = geocodes.managedObject()
-        }
-        if let location = location {
-            place.location = location.managedObject()
-        }
-        if let categories = categories {
-            for each in categories {
-                if place.categories == nil {
-                    place.categories = [each.managedObject()]
-                }else{
-                place.categories?.append(each.managedObject())
-                }
-            }
-        } 
-        if let photos = photos {
-            for each in photos {
-                if place.photos == nil {
-                    place.photos = [each.managedObject()]
-                }else{
-                    place.photos?.append(each.managedObject())
-                }
-            }
-        }
-        return place
-    }
-}

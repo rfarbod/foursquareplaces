@@ -12,16 +12,18 @@ func placesStateReducer(state: PlacesState, action: Action) -> PlacesState {
     var state = state
     switch action {
     case let action as PlacesActions.SetPlaces:
-        state.places += action.response.results
+        state.places += action.response
         if !action.nextPageCursor.isEmpty {
             state.nextPageCursorState = action.nextPageCursor
         }else{
             state.nextPageCursorState.removeAll()
             state.currentRadiusState += 1000
         }
-        if !action.response.results.isEmpty {
-        DatabaseService.default.addBatchItemsToDatabase(action.response.results)
+        if !action.response.isEmpty {
+        DatabaseService.default.addBatchItemsToDatabase(action.response)
         }
+    case let action as PlacesActions.SetPlacesFromDatabase:
+        state.places = action.places 
     case let action as PlacesActions.SetNewRadius:
         state.currentRadiusState = action.radius
     case let action as PlacesActions.SetNextPageCursor:

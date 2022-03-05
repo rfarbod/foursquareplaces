@@ -6,67 +6,52 @@
 //
 
 import Foundation
-import Realm
-import RealmSwift
+import Unrealm
 import SwiftUI
 
 public protocol DatabaseServiceProtocol: AnyObject {
-    func addToDatabase <T:Persistable> (_ value: T)
-    func addBatchItemsToDatabase <T:Persistable> (_ values: [T])
+    func addToDatabase <T:Realmable> (_ value: T)
+    func addBatchItemsToDatabase <T:Realmable> (_ values: [T])
+    func fetchItems<T:Realmable> (_ type: T.Type) -> [T]
+    
 }
 public extension DatabaseServiceProtocol {
     
-    func addToDatabase<T>(_ value: T) where T : Persistable {
+    func addToDatabase<T>(_ value: T) where T : Realmable {
         
-        let container = try! Container()
-        try! container.write({ transaction in
-            transaction.add(value, update: .modified)
+       let realm = try! Realm()
+        try! realm.write({
+            realm.add(value)
         })
     }
     
     
-    func addBatchItemsToDatabase<T>(_ values: [T]) where T : Persistable {
-         let container = try! Container()
+    func addBatchItemsToDatabase<T>(_ values: [T]) where T : Realmable {
+        let realm = try! Realm()
         for each in values {
-            try! container.write({ transaction in
-                transaction.add(each, update: .modified)
+            try! realm.write({
+                realm.add(each)
             })
         }
+        }
+    
+     func fetchItems<T>(_ type: T.Type) -> [T] where T : Realmable {
+         
+         let realm = try! Realm()
+         let results = Array(realm.objects(T.self))
+         return results
     }
+    
+    
+    
+  
     
 }
 public class DatabaseService: DatabaseServiceProtocol {
-
+   
     public static let `default`: DatabaseServiceProtocol = {
         var service = DatabaseService()
         return service
     }()
 }
     
-
-private final class WriteTransaction {
-    private let realm: Realm
-    internal init(realm: Realm) {
-        self.realm = realm
-    }
-    public func add<T: Persistable>(_ value: T, update: Realm.UpdatePolicy) {
-        realm.add(value.managedObject(), update: update)
-    }
-}
-
-private final class Container {
-    private let realm: Realm
-    public convenience init() throws {
-        try self.init(realm: Realm())
-    }
-    internal init(realm: Realm) {
-        self.realm = realm
-    }
-    public func write(_ block: (WriteTransaction) throws -> Void)
-    throws {
-        let transaction = WriteTransaction(realm: realm)
-        try realm.write {
-            try block(transaction)
-        }
-    }
-}

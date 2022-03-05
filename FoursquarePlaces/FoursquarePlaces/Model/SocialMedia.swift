@@ -6,22 +6,13 @@
 //
 
 import Foundation
+import Unrealm
 
-struct SocialMedia: Codable {
+struct SocialMedia: Codable,Realmable {
     
-    let instagram: String?
-    let twitter: String?
+    
+    var instagram: String?
+    var twitter: String?
 }
 
-extension SocialMedia: Persistable {
-    public init(managedObject: RSocialMedia) {
-        instagram = managedObject.instagram
-        twitter = managedObject.twitter
-    }
-        public func managedObject() -> RSocialMedia {
-            let socialMedia = RSocialMedia()
-            socialMedia.twitter = twitter ?? ""
-            socialMedia.instagram = instagram ?? ""
-            return socialMedia
-        }
-}
+

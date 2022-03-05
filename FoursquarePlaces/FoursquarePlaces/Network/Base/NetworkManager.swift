@@ -13,6 +13,8 @@ public protocol NetworkServiceProtocol: AnyObject {
     func execute<T:Codable> (_ urlRequest: URLRequestBuilder,
                              model: T.Type,
                              completion: @escaping (Result<T,AFError>,String) -> Void)
+    
+    var isReachable: Bool {get}
 }
 
 public extension NetworkServiceProtocol {
@@ -40,9 +42,15 @@ public extension NetworkServiceProtocol {
             }
         }
     }
+    
+    var isReachable: Bool {
+        get {NetworkReachabilityManager.default?.isReachable ?? false}
+    }
+    
 }
 
 public class NetworkService: NetworkServiceProtocol {
+    
    
     
     public static let `default`: NetworkServiceProtocol = {

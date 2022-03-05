@@ -6,29 +6,17 @@
 //
 
 import Foundation
+import Unrealm
 
-struct Hours: Codable {
+struct Hours: Codable,Realmable {
+
     
-    let display: String?
-    let is_local_holiday: Bool?
-    let open_now: Bool?
+
+    var display: String?
+    var is_local_holiday: Bool?
+    var open_now: Bool?
     
+   
 }
 
-extension Hours: Persistable {
 
-    public init(managedObject: RHours) {
-        display = managedObject.display
-        is_local_holiday = managedObject.is_local_holiday
-        open_now = managedObject.open_now
-    }
-        public func managedObject() -> RHours {
-            let hours = RHours()
-            hours.display = display
-            hours.open_now = open_now ?? false
-            hours.is_local_holiday = is_local_holiday ?? false
-            return hours
-        }
-
-}
-            

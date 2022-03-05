@@ -5,32 +5,41 @@ PODS:
   - Realm/Headers (10.22.0)
   - RealmSwift (10.22.0):
     - Realm (= 10.22.0)
+  - Runtime (2.2.2)
   - SDWebImage (5.12.3):
     - SDWebImage/Core (= 5.12.3)
   - SDWebImage/Core (5.12.3)
   - SDWebImageSwiftUI (2.0.2):
     - SDWebImage (~> 5.10)
+  - Unrealm (1.9.4):
+    - Realm
+    - RealmSwift
+    - Runtime
 
 DEPENDENCIES:
   - Alamofire
-  - RealmSwift
   - SDWebImageSwiftUI
+  - Unrealm
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Realm
     - RealmSwift
+    - Runtime
     - SDWebImage
     - SDWebImageSwiftUI
+    - Unrealm
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Realm: d9e4e5877095a6722145811f56fe89a531c9659d
   RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
+  Runtime: 67741bd196fb4ad821c4d259ccc527bf734d8806
   SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  Unrealm: 547a3e1432a86df5cff7b74927a60cc664cc2a0d
 
-PODFILE CHECKSUM: 4184f760516264889a7a04634f5b2f0448f11562
+PODFILE CHECKSUM: 96a1cb52532678a6f613fdf90c9d6f24294ea8d9
 
 COCOAPODS: 1.10.2

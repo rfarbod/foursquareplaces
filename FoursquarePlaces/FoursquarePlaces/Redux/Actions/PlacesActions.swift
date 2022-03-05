@@ -12,6 +12,8 @@ struct PlacesActions {
     
     struct GetPlaces: AsyncAction {
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
+            if NetworkService.default.isReachable {
             var urlReuqest:URLRequestBuilder
             guard let state = state as? AppState else {
                 return
@@ -45,11 +47,15 @@ struct PlacesActions {
                         dispatch(GetPlaces())
                     }else{
                         let placesResult = PlacesResult(results: actionPlaces)
-                        dispatch(SetPlaces(response: placesResult, nextPageCursor: cursor))
+                        dispatch(SetPlaces(response: placesResult.results, nextPageCursor: cursor))
                     }
                 case let .failure(error):
                     print(error)
                 }
+            }
+            }else{
+                let places = DatabaseService.default.fetchItems(Place.self)
+                store.dispatch(action: PlacesActions.SetPlacesFromDatabase(places: places))
             }
         }
     }
@@ -58,7 +64,8 @@ struct PlacesActions {
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
-            guard let id = store.state.placesState.selectedPlace.id else {return}
+    
+            let id = store.state.placesState.selectedPlace.id
             let urlRequest = Endpoints.getPlaceDetails(id).resolve()
         
             
@@ -67,7 +74,7 @@ struct PlacesActions {
                 case let .success(place):
                     guard let hours = place.hours else{return}
                     guard let social_media = place.social_media else{return}
-                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id ?? "" , hours: hours, socialMedia: social_media))
+                    store.dispatch(action: PlacesActions.SetPlaceDetail(id: place.id  , hours: hours, socialMedia: social_media))
                 case let .failure(error):
                     print(error)
                 }
@@ -87,8 +94,11 @@ struct PlacesActions {
         let place: Place
     }
     
+    struct SetPlacesFromDatabase: Action {
+        let places : [Place]
+    }
     struct SetPlaces: Action {
-        let response: PlacesResult
+        let response: [Place]
         let nextPageCursor: String
     }
     
