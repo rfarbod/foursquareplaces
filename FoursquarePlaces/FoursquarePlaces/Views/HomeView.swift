@@ -34,7 +34,7 @@ struct HomeView: View {
                             PlaceView(place: place)
                                 .onAppear {
                                     //getting ready to fetch new places when user is close to the bottom of the list
-                                    if place == self.places.last{
+                                    if place == self.places.last && NetworkService.default.isReachable {
                                         store.dispatch(action: PlacesActions.GetPlaces())
                                     }
                                         
@@ -59,7 +59,8 @@ struct HomeView: View {
             .navigationTitle("Nearby Places")
         }
         .onChange(of: userLat, perform: { newValue in
-            store.dispatch(action: PlacesActions.GetPlaces())
+                store.dispatch(action: PlacesActions.GetPlaces())
+           
         })
         .onAppear {
             if userLat.isZero {

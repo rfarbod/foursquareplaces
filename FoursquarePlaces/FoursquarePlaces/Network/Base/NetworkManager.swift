@@ -44,7 +44,7 @@ public extension NetworkServiceProtocol {
     }
     
     var isReachable: Bool {
-        get {NetworkReachabilityManager.default?.isReachable ?? false}
+        get {NetworkReachability.shared.isNetworkAvailable()}
     }
     
 }
