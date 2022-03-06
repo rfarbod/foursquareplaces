@@ -12,6 +12,7 @@ final class LocationManager: NSObject {
     
     static var shared = LocationManager()
     private var locationManager: CLLocationManager
+    var locationIsSet: Bool = false
     
     override init() {
         
@@ -58,8 +59,12 @@ extension LocationManager: CLLocationManagerDelegate {
                 DatabaseService.default.removeAll()
                 store.state.placesState.places.removeAll()
                 store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))
+            }else if !locationIsSet {
+                store.dispatch(action: LocationActions.SetLocation(userLat: lat, userLong: long))
+                locationIsSet = true
             }
         }else{
+            locationIsSet = true
             store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))
         }
         
