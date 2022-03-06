@@ -13,7 +13,7 @@ I chose **Realm** for data caching over core data because realm's engine is fast
 
 https://github.com/kitasuke/SwiftUI-Flux
 <br>
-What i used to implement Redux. This framework leverages Apple's **Combine** framework.
+What i used to implement Redux. This library leverages Apple's **Combine** framework.
 
 
 https://github.com/SDWebImage/SDWebImageSwiftUI
