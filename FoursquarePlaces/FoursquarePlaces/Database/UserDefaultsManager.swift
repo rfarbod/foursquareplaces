@@ -10,8 +10,9 @@ import CoreLocation
 
 extension UserDefaults{
     
-    func setLocation(latitude: Double, long: Double) {
+    func setLocation(latitude: Double, longitude: Double) {
         set(latitude, forKey: UserDefaultsKeys.Latitude.rawValue)
+        set(longitude, forKey: UserDefaultsKeys.Longitude.rawValue)
     }
 
     func getLocation() -> (Double,Double){
