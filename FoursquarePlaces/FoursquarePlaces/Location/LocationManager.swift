@@ -59,6 +59,7 @@ extension LocationManager: CLLocationManagerDelegate {
             previousCoordinate = CLLocation(latitude: CLLocationDegrees(store.state.locationState.userLat), longitude: CLLocationDegrees(store.state.locationState.userLong))
         }else{
             let (lat,long) = UserDefaults.standard.getLocation()
+            store.dispatch(action: LocationActions.SetLocation(userLat: lat, userLong: long))
             previousCoordinate = CLLocation(latitude: lat, longitude: long)
         }
         let distance = coordinate.distance(from: previousCoordinate)
