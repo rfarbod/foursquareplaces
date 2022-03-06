@@ -57,7 +57,7 @@ extension LocationManager: CLLocationManagerDelegate {
             let distance = currentLocation.distance(from: previous)
             if distance > 100 {
                 DatabaseService.default.removeAll()
-                store.state.placesState.places.removeAll()
+                store.dispatch(action: PlacesActions.RemoveAllLocations())
                 store.dispatch(action: LocationActions.SetLocation(userLat: lat,userLong: long))
             }else if !locationIsSet {
                 store.dispatch(action: LocationActions.SetLocation(userLat: lat, userLong: long))

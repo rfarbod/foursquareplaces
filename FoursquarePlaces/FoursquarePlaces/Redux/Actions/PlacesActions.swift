@@ -132,4 +132,8 @@ struct PlacesActions {
     struct SetNewRadius: Action {
         let radius: Int
     }
+    
+    struct RemoveAllLocations: Action {
+        
+    }
 }

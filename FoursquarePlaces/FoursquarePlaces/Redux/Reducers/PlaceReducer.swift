@@ -63,6 +63,8 @@ func placesStateReducer(state: PlacesState, action: Action) -> PlacesState {
                 state.selectedPlace.tips = action.tips 
             }
         }
+    case let _ as PlacesActions.RemoveAllLocations:
+        state.places.removeAll()
     default:
         break
     }
